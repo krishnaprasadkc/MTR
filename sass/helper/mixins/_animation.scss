@@ -1,0 +1,15 @@
+// Single side border-radius
+
+@mixin curved-bg(){
+	padding: $padding-default;
+	background: linear-gradient(to bottom left, #0278F4 50%, transparent 50.5%) no-repeat bottom, /* bottom part */
+	linear-gradient(0deg, #0278F4, #0278F4) no-repeat top;
+	/* top portion */
+	color: white;
+	padding-bottom: 8*$padding-default;
+	background-size: 100% 7em, 100% calc(100% - 7em);
+}
+.test {
+	position: relative;
+	@include curved-bg;
+}
