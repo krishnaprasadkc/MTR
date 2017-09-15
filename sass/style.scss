@@ -1,16 +1,23 @@
 /*****************************************************************
 ******************************************************************
-*****************************************************************/
+******************************************************************
 			PROJECT: MOTOROLA: CHANNEL
 			AUTHOR: SUYATI TECHNOLOGIES
 			START DATE: 15/09/2017
-/*****************************************************************
+			
+	FILE STRUCTURE:-
+		1. HELPER (VARIABLES, MIXINS, EXTEND)
+		2. BASE (FONT, ICONS, RESET, GLOBAL)
+		3. COMPONENT (BUTTON, TIMELINE, MODAL, SEARCH, NAVIGATION ETC)
+		4. EXTERNAL (PLUGIN CUSTOMIZATIONS - DATE PICKER)
+			
+*****************************************************************
 ******************************************************************
 *****************************************************************/
+
 
 @import "helper/_helper-master.scss";
 @import "base/_base-master.scss";
 @import "component/_component-master.scss";
 @import "external/_external-master.scss";
-
 
