@@ -1,81 +1,159 @@
-// General styles, not relevant to checkbox
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    width: 100%;
-    background: #fafafa;
-    color: #757575;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.title {
-    display: block;
-    margin: 0 0 20px;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-// Variables
-$border-color: rgba(0, 0, 0 , .54);
-$checked-color: #3f51b5;
-
 // Checkbox
+
+
+.main-filter {
+    border-left: 1px solid $color-grey-border;
+    .dropdown-filter {
+        cursor: pointer;
+        background: $color-brand-light;
+        border: 1px solid $color-grey-border;
+        border-left: 0;
+        .fa{
+            position: absolute;
+            right: $padding-default;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 10px;
+            line-height: 10px;
+            font-size: $font-default / 3 * 5;
+            color: $color-brand;
+        }
+        &.open {
+            .dropdown-menu-filter {
+                display: block;
+            }
+            .selector {
+                background: $color-grey-light;
+                border-left: 1px solid $color-grey-border;
+            }
+        }
+        .name {
+            font-weight: $font-bold;
+            padding: $padding-default !important;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .selector {
+            color: $color-brand;
+            padding: $padding-default !important;
+            border-left: 1px solid $color-brand-light;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .dropdown-menu-filter {
+            display: none;
+            position: relative;
+            border: 1px solid $color-grey-border;
+            border-top: 0;
+            border-right: 0;
+            padding-bottom: 0;
+            right: 0;
+            top: 100%;
+            position: absolute;
+            background: $color-grey-light;
+            &[class*=" col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &:before {
+                content: '';
+                width: 1px;
+                bottom: -1px;
+                left: 100%;
+                top: 0;
+                position: absolute;
+                background: $color-grey-border;
+            }
+            .list-filter {
+                padding: 0 $padding-default;
+                max-height: 200px;
+                overflow: auto;
+            }
+            .search-filter {
+                padding: 0 $padding-default;
+                margin-top: -6px;
+            }
+            .form-control {
+                background: $color-grey-light;
+                outline: none;
+                border: 0;
+                box-shadow: none;
+                padding-left: 0;
+                color: $color-brand;
+                border-radius: 0;
+                border-bottom: 1px solid $color-brand;
+                margin-bottom: 15px;
+            }
+             ::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: $color-brand;
+            }
+             ::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $color-brand;
+            }
+             :-ms-input-placeholder {
+                /* IE 10+ */
+                color: $color-brand;
+            }
+             :-moz-placeholder {
+                /* Firefox 18- */
+                color: $color-brand;
+            }
+        }
+    }
+    .checkbox label {
+        padding-left: 0;
+    }
+}
+//global checkbox style
 .checkbox {
-    display: inline-block;
+    display: block;
     position: relative;
     margin: 0 0 10px;
     font-size: 16px;
     line-height: 24px;
-    
     &__input {
         position: absolute;
         top: 4px;
         left: 0;
         width: 16px;
         height: 16px;
-        opacity: 0;    
+        opacity: 0;
         z-index: 0;
     }
-    
     // Unchecked
     &__label {
         display: block;
-        padding: 0 0 0 24px;
+        padding-right: 20px;
         cursor: pointer;
-        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $color-grey-dark;
         &:before {
             content: '';
             position: absolute;
             top: 4px;
-            left: 0;
+            right: 0;
             width: 16px;
             height: 16px;
             background-color: transparent;
-            border: 2px solid $border-color;
+            border: 1px solid $color-grey-border;
+            background: $color-secondary;
             border-radius: 2px;
             z-index: 1;
             transition: all .28s cubic-bezier(.4, 0, .2, 1);
             transition-property: background-color, border-color;
         }
-        
         &:after {
             content: '';
             position: absolute;
             top: 5px;
-            left: 5px;
+            right: 5px;
             width: 6px;
             height: 12px;
             border-bottom: 2px solid transparent;
@@ -85,19 +163,16 @@ $checked-color: #3f51b5;
             transition: border-color .28s cubic-bezier(.4, 0, .2, 1);
         }
     }
-    
     // Checked
-    &__input:checked + &__label {
+    &__input:checked+&__label {
         &:before {
-            background-color: $checked-color;
-            border-color: $checked-color;
+            background-color: $color-brand;
+            border-color: $color-brand;
         }
-        
         &:after {
             border-color: #fff;
         }
     }
-    
     // Focused
     // Uncomment for accessible outline
     // &__input:focus + &__label {
