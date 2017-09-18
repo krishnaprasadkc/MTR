@@ -1,3 +1,25 @@
-body{
-	background: $color-grey !important;
+/*no gutter*/
+.row.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
 }
+.row.no-gutter > [class^="col-"],
+.row.no-gutter > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.container-fluid.no-gutter {
+  padding-right:  0;
+  padding-left: 0;
+}
+.container-fluid.no-gutter > .row,
+.container-fluid.no-gutter > .row{
+  margin-right: 0;
+  margin-left: 0;
+}
+.container-fluid.no-gutter > .row > [class^="col-"],
+.container-fluid.no-gutter > .row > [class*=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+/**/
