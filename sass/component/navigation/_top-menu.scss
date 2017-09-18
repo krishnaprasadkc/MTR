@@ -1,0 +1,26 @@
+.nav-search-wrapper{
+	.navbar-toggle{
+		display: block;
+		@extend .margin-none;
+	}
+	.navbar-collapse{
+		display: none;
+		&.collapse{
+			display: none !important;
+		}
+		&.in{
+			display: inline-block !important;
+		}
+		.navbar-nav{
+			li{
+				a{
+					@extend .padding-top-none;
+					@extend .padding-bottom-none;
+					text-transform: uppercase;
+					font-size: $font-default+2;
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+body{
+	font-family: $brand-font;
+	font-size: $font-default;
+	line-height: $line-height;
+	color: $color-primary;
+	background: $color-grey-light;
+}
+.header-wrapper {
+	@extend .padding-top-1x;
+	@extend .padding-bottom-1x;
+}
