@@ -48,12 +48,12 @@ $color-secondary: rgb(255, 255, 255); 	//fff
 
 /*******************/
 
-
-$color-grey-extralight: lighten($color-primary, 95%); //f9f9f9
-$color-grey-light: lighten($color-primary, 95%); 	//f1f1f1
-$color-grey-medium: lighten($color-primary, 95%); 	//ececec
-$color-grey-dark: lighten($color-primary, 95%); 	//c1c1c1
-$color-grey-border: lighten($color-primary, 80%); 	//c9c9c9
+$color-grey: red;
+$color-grey-extralight: lighten($color-primary, 96%); //f9f9f9
+$color-grey-light: lighten($color-primary, 94%); 	//f1f1f1
+$color-grey-medium: lighten($color-primary, 90%); 	//ececec
+$color-grey-dark: lighten($color-primary, 80%); 	//c1c1c1
+$color-grey-border: lighten($color-primary, 70%); 	//c9c9c9
 
 
 /*******************/
