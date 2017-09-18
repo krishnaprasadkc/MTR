@@ -1,7 +1,25 @@
 .nav-search-wrapper{
 	.navbar-toggle{
-		display: block;
+		display: inline-block;
 		@extend .margin-none;
+		@extend .padding-none;
+		@extend .padding-right-1x;
+		@extend .padding-top-1x;
+		.fa{
+			font-size: $font-default+7;
+		}
+		.fa-bars{
+			&:before{
+				content: '\f038';
+			}
+		}
+		&.collapsed{
+			.fa-bars{
+				&:before{
+					content: '\f0c9';
+				}
+			}
+		}
 	}
 	.navbar-collapse{
 		display: none;
@@ -13,14 +31,53 @@
 		}
 		.navbar-nav{
 			li{
+				background: none;
 				a{
-					@extend .padding-top-none;
+					@extend .padding-top-1x;
 					@extend .padding-bottom-none;
 					text-transform: uppercase;
 					font-size: $font-default+2;
 					color: $color-primary;
+					background: none;
+				}
+				&.active{
+					&:before{
+						position: absolute;
+						left: 0;
+						top: -($padding-default);
+						content: '';
+						height: 5px;
+						width: 100%;
+						background: $color-brand;
+					}
+					a{
+						font-weight:$font-semibold;
+						color: $color-brand;
+					}
 				}
 			}
 		}
+	}
+}
+
+.user-profile{
+	.user-avatar{
+		vertical-align: top;
+	}
+	.user-wrapper{
+		display: inline-block;
+		.user-name{
+			max-width: 150px;
+			font-size: $font-default+2;
+			font-weight: $font-semibold;
+		}
+		.user-designation{
+			max-width: 150px;
+			display: block;
+		}
+	}
+	.logout{
+		color: $color-primary;
+		padding-top: $padding-default;
 	}
 }

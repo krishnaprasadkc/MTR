@@ -3,9 +3,14 @@ body{
 	font-size: $font-default;
 	line-height: $line-height;
 	color: $color-primary;
+	font-weight: $font-regular;
 	background: $color-grey-light;
+	@extend .margin-none;
+	@extend .padding-none;
 }
 .header-wrapper {
 	@extend .padding-top-1x;
 	@extend .padding-bottom-1x;
+	min-height: 70px;
+	background: $color-secondary;
 }

@@ -28,33 +28,39 @@
 		</div>
 		
 		<!-- Filter Switch-->
-		<div class="col-sm-2 filter-switch">
-			Filter Switch
+		<div class="col-sm-2">
+			<div class="btn-group filter-switch">
+			   <button type="button" class="btn">
+				  <i class="fa fa-align-left" aria-hidden="true"></i>
+					Quarterly
+				</button>
+			  <button type="button" class="btn active">
+				<i class="fa fa-windows" aria-hidden="true"></i>
+				  Monthly
+				</button>
+			</div>
 		</div>
 		
 		<!-- Menu & Search-->
 		<div class="col-sm-6 nav-search-wrapper">
 			
-			<nav class="navbar text-right">
+			<nav class="clearfix text-right">
 				 
-				 <div class="collapse navbar-collapse" id="top-nav">
+				 <div class="nav-items collapse navbar-collapse" id="top-nav">
 					<ul class="nav navbar-nav">
 					  <li class="active"><a href="#">NAV MENU ONE</a></li>
 					  <li><a href="#">NAV MENU TWO</a></li>
 					  <li><a href="#">NAV MENU THREE</a></li>
 					</ul>
 				 </div>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+				<div class="search-input collapse navbar-collapse" id="search">
+					<input type="text" placeholder="Quick Search">
+				 </div>
+				
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search">
 					  <i class="fa fa-search" aria-hidden="true"></i>
 				</button>
-				<div class="collapse navbar-collapse" id="search">
-					<ul class="nav navbar-nav">
-					  <li class="active"><a href="#">NAV MENU ONE</a></li>
-					  <li><a href="#">NAV MENU TWO</a></li>
-					  <li><a href="#">NAV MENU THREE</a></li>
-					</ul>
-				 </div>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
 					  <i class="fa fa-bars" aria-hidden="true"></i>
 				</button>
 			</nav>
@@ -66,7 +72,14 @@
 		
 		<!-- User Profile-->
 		<div class="col-sm-2 user-profile">
-			user-profile
+			<img src="image/boy.png" class="img-circle user-avatar" alt="Cinque Terre" width="50" height="50">
+			<div class="user-wrapper">
+				<div class="user-name ellipsis">Bradly Bivens</div>
+				<small class="user-designation ellipsis">Regional Head</small>
+			</div>
+			<a href="#" class="pull-right logout">
+				<i class="fa fa-2x fa-power-off" aria-hidden="true"></i>
+			</a>
 		</div>
 		
 	</header>

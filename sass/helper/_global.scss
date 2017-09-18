@@ -1,3 +1,14 @@
-*{
-	border: dashed 1px red;
+//*{
+//	border: dashed 1px red;
+//}
+
+button{
+	outline: none 0px !important;
+	
+}
+
+.ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

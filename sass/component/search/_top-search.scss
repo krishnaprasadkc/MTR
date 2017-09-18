@@ -1,0 +1,8 @@
+.nav-search-wrapper{
+	.navbar-collapse{
+		&.search-input{
+			@extend .padding-top-1x;
+			vertical-align: top;
+		}
+	}
+}
