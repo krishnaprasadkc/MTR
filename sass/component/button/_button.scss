@@ -1,0 +1,9 @@
+.btn{
+	
+}
+.btn-square{
+	@include border-radius(0);
+}
+.btn-circle{
+	@include border-radius(50%);
+}
