@@ -146,10 +146,14 @@
                 <div class="timeline-head container-fluid">
                     <div class="row">
                         <div class="col-xs-3">
-                            <h2 class="heading-default">
-                                <i class="fa fa-tasks" aria-hidden="true"></i>
-                                ORDERS
-                            </h2>
+                            <div class="timeline-controls">
+                                <button class="btn btn-circle btn-primary" data-toggle="tooltip" data-placement="bottom" title="Create New Order"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn btn-circle btn-primary" data-toggle="tooltip" data-placement="bottom" title="Reset Timeline"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+                                <div class="search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Search here" class="form-control">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-xs-4">
                             <h2 class="heading-default">
@@ -158,21 +162,21 @@
                             </h2>
                             <div class="calendar-timeline">
                                 <div class="head">
-                                    <button class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <button class="left btn btn-secondary"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                                     <label>SEP'17</label>
-                                    <button class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="right btn btn-secondary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                                 </div>
                                 <div class="body row no-gutter">
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week1
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week2
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week3
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week4
                                     </div>
                                 </div>
@@ -185,30 +189,45 @@
                             </h2>
                             <div class="calendar-timeline">
                                 <div class="head">
-                                    <button class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <button class="left btn btn-secondary"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
                                     <label>SEP'17</label>
-                                    <button class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="right btn btn-secondary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                                 </div>
                                 <div class="body row no-gutter">
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week1
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week2
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week3
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div>
                                         Week4
+                                    </div>
+                                    <div>
+                                        Week5
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-
+                <!--/time line head-->
+                <!--timeline-->
+                <div class="timeline">
+                    <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Collapsible Group Item #1
+                            </a>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          
+                        </div>
+                    </div>-->
+                    
+                </div>
+                <!--/timeline-->
             </div>
         </div>
     </div>
@@ -218,12 +237,20 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
+        //---------------------------------------
         //for dropdown checkbox
+        //---------------------------------------
         $('.dropdown-menu-filter').on({
             "click":function(e){
               e.stopPropagation();
             }
         });
+        //---------------------------------------
+        //tooltip
+        //---------------------------------------
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 </body>
 

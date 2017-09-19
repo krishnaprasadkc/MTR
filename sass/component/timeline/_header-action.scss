@@ -1,3 +1,6 @@
+/*----------------------------------------
+Timeline header
+----------------------------------------*/
 .timeline-head{
     padding-top: $padding-default;
     padding-bottom: $padding-default;
@@ -7,6 +10,54 @@
         i{
             margin-right: $padding-default;
             font-size: $font-default + 8;
+        }
+    }
+    .timeline-controls{
+        margin-top: 65px;
+        .btn{
+            margin-right: $padding-default;
+        }
+        .search {
+            display: inline-block;
+            width: 50%;
+            position: relative;
+            input{
+                @include border-radius(100px);
+                padding: $padding-default;
+                color: $color-brand;
+                height: auto;
+                padding-left: 45px;
+                border-color: $color-grey-border;
+            }
+            .fa-search{
+                position: absolute;
+                left: $padding-default;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                color: $color-brand;
+                font-size: $font-default + 8;
+                height: 22px;
+            }
+            ::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: $color-brand;
+            }
+
+            ::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $color-brand;
+            }
+
+             :-ms-input-placeholder {
+                /* IE 10+ */
+                color: $color-brand;
+            }
+
+             :-moz-placeholder {
+                /* Firefox 18- */
+                color: $color-brand;
+            }
         }
     }
 }

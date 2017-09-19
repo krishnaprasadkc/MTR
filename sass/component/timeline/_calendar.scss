@@ -1,3 +1,6 @@
+/*----------------------------------------
+Calendar
+----------------------------------------*/
 .calendar-timeline {
     background: $color-brand-light;
     border: 1px solid $color-grey-border;
@@ -6,22 +9,38 @@
     .head {
         padding: $padding-default / 3;
         border-bottom: 1px solid $color-grey-border;
+        display: table;
+        width: 100%;
         .left {
             float: left;
         }
-        .right{
+        .right {
             float: right;
         }
-        label{
+        label {
             display: inline-block;
             text-align: center;
             font-size: $font-default + 2;
             font-weight: $font-bold;
+            line-height: 27px;
+        }
+        .btn {
+            font-size: $font-default * 2;
+            padding: 0 $padding-default /1.5;
+            line-height: 1;
+            i {
+                color: $color-brand-light;
+            }
         }
     }
     .body {
         padding: $padding-default / 2 $padding-default / 3;
         text-align: center;
         color: $color-brand;
+        display: table;
+        width: 100%;
+        >div {
+            display: table-cell;
+        }
     }
 }

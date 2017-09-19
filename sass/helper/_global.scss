@@ -1,30 +1,65 @@
-/*no gutter*/
+/*----------------------------------------
+No gutter
+----------------------------------------*/
+
 .row.no-gutter {
-  margin-right: 0;
-  margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
-.row.no-gutter > [class^="col-"],
-.row.no-gutter > [class*=" col-"] {
-  padding-right: 0;
-  padding-left: 0;
+
+.row.no-gutter>[class^="col-"],
+.row.no-gutter>[class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
 }
+
 .container-fluid.no-gutter {
-  padding-right:  0;
-  padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
-.container-fluid.no-gutter > .row,
-.container-fluid.no-gutter > .row{
-  margin-right: 0;
-  margin-left: 0;
+
+.container-fluid.no-gutter>.row,
+.container-fluid.no-gutter>.row {
+    margin-right: 0;
+    margin-left: 0;
 }
-.container-fluid.no-gutter > .row > [class^="col-"],
-.container-fluid.no-gutter > .row > [class*=" col-"]{
-  padding-right: 0;
-  padding-left: 0;
+
+.container-fluid.no-gutter>.row>[class^="col-"],
+.container-fluid.no-gutter>.row>[class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
 }
-/**/
+
 
 /*----------------------------------------
 To Reset Default Blue border from Chrome
 ----------------------------------------*/
-button:focus {outline:0 !important;}
+
+button:focus {
+    outline: 0 !important;
+}
+
+/*----------------------------------------
+To Reset placeholder color
+----------------------------------------*/
+body{
+    ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $color-brand;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color-brand;
+    }
+
+     :-ms-input-placeholder {
+        /* IE 10+ */
+        color: $color-brand;
+    }
+
+     :-moz-placeholder {
+        /* Firefox 18- */
+        color: $color-brand;
+    }
+}
