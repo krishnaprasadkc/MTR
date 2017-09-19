@@ -1,5 +1,27 @@
 .calendar-timeline {
-	background: $color-brand-light;
+    background: $color-brand-light;
     border: 1px solid $color-grey-border;
     @include border-radius();
+    text-align: center;
+    .head {
+        padding: $padding-default / 3;
+        border-bottom: 1px solid $color-grey-border;
+        .left {
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        label{
+            display: inline-block;
+            text-align: center;
+            font-size: $font-default + 2;
+            font-weight: $font-bold;
+        }
+    }
+    .body {
+        padding: $padding-default / 2 $padding-default / 3;
+        text-align: center;
+        color: $color-brand;
+    }
 }
