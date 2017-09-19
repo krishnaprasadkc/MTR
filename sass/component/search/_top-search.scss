@@ -1,7 +1,7 @@
 .nav-search-wrapper{
 	.navbar-collapse{
 		&.search-input{
-			@extend .padding-top-1x;
+			padding-top:($padding-default)-5;
 			vertical-align: top;
 		}
 	}

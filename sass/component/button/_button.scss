@@ -118,7 +118,7 @@ Mixin Format: ($btn-bg, $btn-border, $btn-text)
 	@include button-color($color-brand, $color-secondary);
 }
 .btn-secondary {
-	@include button-color($color-grey-dark, $color-primary);
+	@include button-color($color-grey-medium, $color-primary);
 }
 
 /*---------------------------------------------
