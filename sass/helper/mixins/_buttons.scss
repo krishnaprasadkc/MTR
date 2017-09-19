@@ -1,6 +1,6 @@
-@mixin button-color($btn-bg, $btn-border, $btn-text) {
+@mixin button-color($btn-bg, $btn-text) {
 	background: $btn-bg;
-	border-color: $btn-border;
+	border:none 0px;
 	color: $btn-text;
 	-webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -9,11 +9,9 @@
   transition: 0.3s;
 	&:hover, &:active{
 		background: darken($btn-bg, 10%) !important;
-		border-color: darken($btn-border, 10%) !important;
 	}
 	&:focus{
 		background: $btn-bg !important;
-		border-color: $btn-bg !important;
 	}
 	i{
 		color: $btn-text;
