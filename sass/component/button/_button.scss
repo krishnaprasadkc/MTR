@@ -1,9 +1,27 @@
 .btn{
-	
+	padding: $padding-default/2 $padding-default;
+	@include border-radius($border-radius-default);
 }
-.btn-square{
+/*---------------------------------------------
+---------------------------------------------*/
+.btn-squared{
 	@include border-radius(0);
 }
+.btn-rounded{
+	@include border-radius(8*$border-radius-default);
+}
 .btn-circle{
+	width:$btn-size-default;
+  	height:$btn-size-default;
 	@include border-radius(50%);
+}
+/*---------------------------------------------
+---------------------------------------------*/
+.btn-primary {
+	@include button-color($color-brand, $color-brand, $color-secondary);
+}
+.btn-secondary {
+	background: $color-grey-light;
+	border-color: $color-brand;
+	@include button-color($color-grey-light, $color-grey-light, $color-primary);
 }
