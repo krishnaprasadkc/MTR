@@ -1,0 +1,35 @@
+/****************************************************************
+TOOLTIP CUSTOMIZATION
+****************************************************************/
+
+.tooltip {
+	background: none !important;
+	@include border-radius($border-radius-default);
+	&.top {
+		.tooltip-arrow {
+			border-top: 5px solid $color-brand;
+		}
+	}
+	&.bottom {
+		.tooltip-arrow {
+			border-bottom: 5px solid $color-brand;
+		}
+	}
+	&.left {
+		.tooltip-arrow {
+			border-left: 5px solid $color-brand;
+		}
+	}
+	&.right {
+		.tooltip-arrow {
+			border-right: 5px solid $color-brand;
+		}
+	}
+	.tooltip-inner {
+		font-weight: $font-regular;
+		background-color: $color-secondary !important;
+		color: $color-brand;
+		border: 1px solid $color-brand;
+		padding: $padding-default/2;
+	}
+}
