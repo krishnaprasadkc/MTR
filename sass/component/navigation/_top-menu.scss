@@ -79,7 +79,9 @@
 		}
 	}
 	.logout{
-		color: $color-primary;
 		padding-top: $padding-default;
+		i{
+			color: $icon-black;
+		}
 	}
 }

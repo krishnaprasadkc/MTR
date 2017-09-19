@@ -1,4 +1,6 @@
 body{
+	min-width: 1024px;
+	overflow: auto;
 	font-family: $brand-font;
 	font-size: $font-default;
 	line-height: $line-height;
