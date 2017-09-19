@@ -87,18 +87,21 @@
                 border-bottom: 1px solid $color-brand;
                 margin-bottom: 15px;
             }
-             ::-webkit-input-placeholder {
+            ::-webkit-input-placeholder {
                 /* Chrome/Opera/Safari */
                 color: $color-brand;
             }
-             ::-moz-placeholder {
+
+            ::-moz-placeholder {
                 /* Firefox 19+ */
                 color: $color-brand;
             }
+
              :-ms-input-placeholder {
                 /* IE 10+ */
                 color: $color-brand;
             }
+
              :-moz-placeholder {
                 /* Firefox 18- */
                 color: $color-brand;
