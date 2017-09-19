@@ -16,6 +16,7 @@
 .btn {
 	padding: ($padding-default)-10 $padding-default;
 	@include border-radius($border-radius-default);
+	text-shadow: none;
 	/*Wave Effect styles*/
 	position: relative;
 	cursor: pointer;
@@ -115,11 +116,10 @@ Mixin Format: ($btn-bg, $btn-border, $btn-text)
 
 .btn-primary {
 	@include button-color($color-brand, $color-brand, $color-secondary);
+	font-weight: $font-bold;
 }
 .btn-secondary {
-	background: $color-grey-light;
-	border-color: $color-brand;
-	@include button-color($color-grey-light, $color-grey-light, $color-primary);
+	@include button-color($color-grey-dark, $color-grey-dark, $color-primary);
 }
 
 /*---------------------------------------------

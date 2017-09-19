@@ -6,8 +6,7 @@ body{
 	line-height: $line-height;
 	color: $color-primary;
 	font-weight: $font-regular;
-	background: $color-grey-light;
-	background: #FFF;
+	background: $color-grey-extralight;
 	@extend .margin-none;
 	@extend .padding-none;
 }
