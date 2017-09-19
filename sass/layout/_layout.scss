@@ -7,6 +7,7 @@ body{
 	color: $color-primary;
 	font-weight: $font-regular;
 	background: $color-grey-light;
+	background: #FFF;
 	@extend .margin-none;
 	@extend .padding-none;
 }

@@ -1,0 +1,5 @@
+@mixin button-color($btn-bg, $btn-border, $btn-text) {
+	background: $btn-bg;
+	border-color: $btn-border;
+	color: $btn-text;
+}
