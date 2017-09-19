@@ -2,6 +2,19 @@
 	background: $btn-bg;
 	border-color: $btn-border;
 	color: $btn-text;
+	-webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+	&:hover, &:active{
+		background: darken($btn-bg, 10%) !important;
+		border-color: darken($btn-bg, 10%) !important;
+	}
+	&:focus{
+		background: darken($btn-bg, 18%) !important;
+		border-color: darken($btn-bg, 18%) !important;
+	}
 	i{
 		color: $btn-text;
 	}
