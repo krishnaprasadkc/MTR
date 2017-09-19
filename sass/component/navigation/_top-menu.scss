@@ -66,6 +66,8 @@
 	}
 	.user-wrapper{
 		display: inline-block;
+		padding-top: $padding-default/2;
+		padding-left: $padding-default/2;
 		.user-name{
 			max-width: 150px;
 			font-size: $font-default+2;
