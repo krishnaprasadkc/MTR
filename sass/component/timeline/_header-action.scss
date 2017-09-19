@@ -1,0 +1,11 @@
+.time-line-head{
+    padding-top: $padding-default;
+    padding-bottom: $padding-default;
+    h2{
+        text-transform: uppercase;
+        color: $color-brand;
+        i{
+            margin-right: $padding-default;
+        }
+    }
+}
