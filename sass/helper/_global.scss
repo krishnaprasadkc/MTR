@@ -23,3 +23,8 @@
   padding-left: 0;
 }
 /**/
+
+/*----------------------------------------
+To Reset Default Blue border from Chrome
+----------------------------------------*/
+button:focus {outline:0 !important;}
