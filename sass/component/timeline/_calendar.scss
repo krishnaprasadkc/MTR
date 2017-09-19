@@ -1,0 +1,5 @@
+.calendar-timeline {
+	background: $color-brand-light;
+    border: 1px solid $color-grey-border;
+    @include border-radius();
+}
