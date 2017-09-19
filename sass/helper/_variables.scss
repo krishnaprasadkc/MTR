@@ -43,17 +43,18 @@ $color-brand-border: lighten($color-brand, 80%); 	//c9c9c9
 
 /*******************/
 
-$color-primary: rgb(0, 0, 0); 	//000
+$color-primary: #0a0c0d;
 $color-secondary: rgb(255, 255, 255); 	//fff
 
 /*******************/
 
-$color-grey: red;
-$color-grey-extralight: lighten($color-primary, 96%); //f9f9f9
-$color-grey-light: lighten($color-primary, 94%); 	//f1f1f1
-$color-grey-medium: lighten($color-primary, 90%); 	//ececec
-$color-grey-dark: lighten($color-primary, 55%); 	//c1c1c1
-$color-grey-border: lighten($color-primary, 70%); 	//c9c9c9
+$color-grey-extradark: lighten($color-primary, 40%);
+$color-grey-dark: lighten($color-primary, 60%);
+$color-grey-medium: lighten($color-primary, 80%);
+$color-grey-light: lighten($color-primary, 90%);
+$color-grey-extralight: lighten($color-primary, 95%);
+
+$color-grey-border: $color-grey-light;
 
 
 $icon-grey: #747474; 	//747474
