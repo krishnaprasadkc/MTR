@@ -1,3 +1,84 @@
 /*----------------------------------------
 Timeline
 ----------------------------------------*/
+
+.timeline-wrapper {
+    padding: $padding-default;
+    .head {
+        border: 1px solid $color-grey-border;
+        border-top: 0;
+        padding: $padding-default *2 0;
+        .heading-default {
+            margin: 0;
+            color: $color-brand;
+        }
+        .timeline-column-1 {
+            text-align: left;
+            margin-left: $padding-default;
+            h2 {
+                line-height: 45px;
+            }
+        }
+        .timeline-column-2 {
+            text-align: center;
+        }
+        .timeline-column-3 {
+            text-align: center;
+        }
+        .timeline-column-4 {
+            text-align: center;
+            margin-right: $padding-default;
+            line-height: 45px;
+            .btn {
+                background: $color-brand;
+                .fa {
+                    color: $color-secondary;
+                    font-size: $font-default +8;
+                }
+                &.collapsed {
+                    @include button-color($color-grey-medium, $color-secondary);
+                    .fa-angle-up {
+                        display: none;
+                    }
+                    .fa-angle-down {
+                        display: block;
+                    }
+                }
+                .fa-angle-down {
+                    display: none;
+                }
+                .fa-angle-up {
+                    display: block;
+                }
+            }
+        }
+        .calendar-timeline {
+            border: 0;
+            .body {
+                padding: 0;
+            }
+        }
+    }
+    .item-count {
+        border: 1px solid $color-grey-border;
+        @include border-radius(100px);
+        display: inline-block;
+        line-height: 43px;
+        min-width: 45px;
+        padding: 0 $padding-default /1.5;
+        color: $color-primary;
+    }
+    .timeline-level-1 {
+        > .timeline{
+            background: $color-secondary;
+            @include box-shadow();
+            margin-bottom: $padding-default;
+        }
+    }
+    /*Timeline 2*/
+    .timeline-level-2{
+        .head{
+            padding: $padding-default 0;
+        }
+    }
+}

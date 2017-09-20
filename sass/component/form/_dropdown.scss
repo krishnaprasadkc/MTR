@@ -5,7 +5,7 @@
     border-left: 1px solid $color-grey-border;
     .dropdown-filter {
         cursor: pointer;
-        background: $color-brand-light;
+        background: $color-secondary;
         border: 1px solid $color-grey-border;
         border-left: 0;
         .fa{
@@ -38,7 +38,7 @@
         .selector {
             color: $color-brand;
             padding: $padding-default !important;
-            border-left: 1px solid $color-brand-light;
+            border-left: 1px solid $color-secondary;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
