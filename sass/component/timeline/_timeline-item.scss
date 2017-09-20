@@ -31,12 +31,15 @@ Timeline
             line-height: 45px;
             .btn {
                 background: $color-brand;
+                min-width: 44px;
+                position: relative;
                 .fa {
                     color: $color-secondary;
                     font-size: $font-default +8;
+                    line-height: 24px;
                 }
                 &.collapsed {
-                    @include button-color($color-grey-medium, $color-secondary);
+                    @include button-color($color-grey-medium, $color-primary);
                     .fa-angle-up {
                         display: none;
                     }
@@ -51,9 +54,13 @@ Timeline
                     display: block;
                 }
             }
+            .dropdown {
+                display: inline-block;
+            }
         }
         .calendar-timeline {
             border: 0;
+            background: none;
             .body {
                 padding: 0;
             }
@@ -69,16 +76,57 @@ Timeline
         color: $color-primary;
     }
     .timeline-level-1 {
-        > .timeline{
+        >.timeline {
             background: $color-secondary;
             @include box-shadow();
-            margin-bottom: $padding-default;
+            &.panel{
+                margin-bottom: $padding-default;
+            }
         }
     }
-    /*Timeline 2*/
-    .timeline-level-2{
-        .head{
-            padding: $padding-default 0;
+    /*Timeline level 2*/
+    .timeline-level-2 {
+        .head {
+            padding: $padding-default/1.5 0;
+        }
+    }
+    /*Timeline head color*/
+    .timeline {
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        &:before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 5px;
+            left: 0px;
+        }
+        &.panel{
+            margin-bottom: 0;
+        }
+        &.open {
+            .head .heading-default {
+                color: $color-primary;
+            }
+        }
+        .timeline {
+            background: $color-grey-light;
+            &:before {
+                background: $color-grey-dark;
+            }
+            .timeline {
+                background: $color-grey-extralight;
+                &:before {
+                    background: $color-grey-medium;
+                }
+                .timeline {
+                    background: $color-secondary;
+                    &:before {
+                        background: $color-brand;
+                    }
+                }
+            }
         }
     }
 }
