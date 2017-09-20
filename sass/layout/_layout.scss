@@ -16,7 +16,10 @@ body{
 	background: $color-secondary;
 	border-bottom: solid 1px #e9e9e9;
 }
-
+.sidebar-wrapper{
+	background: $color-secondary;
+	position: relative;
+}
 .main-content{
 	@extend .padding-1x;
 }
