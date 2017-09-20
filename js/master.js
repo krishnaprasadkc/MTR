@@ -370,6 +370,8 @@ $('.view-more a').click(function(){
 $('.filter-back a').click(function(){
 	$('.filter-section').removeClass('pop-out');
 });	
+var headerHeight=$('.header-wrapper').innerHeight(); 
+$('.container-fluid').css('padding-top', headerHeight);
 /*******************************************************************************
 ****************************Document Ready Closed******************************/ 
 });
