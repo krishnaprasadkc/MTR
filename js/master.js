@@ -355,13 +355,19 @@ $(document).ready(function(){
 	
 /*****************************Document Ready Starts******************************* 
 *********************************************************************************/
-//	1. TOOLTIP
+/*------------------------------------
+		1. TOOLTIP
+------------------------------------*/
 $('[data-toggle="tooltip"]').tooltip(); 
 
-//	2. POPOVER
+/*------------------------------------
+		2. POPOVER
+------------------------------------*/
 $('[data-toggle="popover"]').popover();  
 	
-// 3. FITLER EXPAND
+/*------------------------------------
+		3. FILTER EXPAND
+------------------------------------*/
 $('.view-more a').click(function(){
 	$('.filter-section').removeClass('pop-out');
   $(this).closest('.filter-section').toggleClass('pop-out animated fadeIn');
@@ -372,6 +378,13 @@ $('.filter-back a').click(function(){
 });	
 var headerHeight=$('.header-wrapper').innerHeight(); 
 $('.container-fluid').css('padding-top', headerHeight);
+	
+/*------------------------------------
+		4. COLLAPSE LEFT PANEL
+------------------------------------*/
+$('.sidebar-toggle-btn').click(function(){
+	$('body').toggleClass('toggle-sidebar');
+});
 /*******************************************************************************
 ****************************Document Ready Closed******************************/ 
 });
