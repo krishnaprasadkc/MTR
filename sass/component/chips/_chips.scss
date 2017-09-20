@@ -2,7 +2,7 @@
 	color: $color-secondary;
 	height: 32px;
 	line-height: 32px;
-	padding:0 $padding-default;
+	padding:0 ($padding-default)-3;
 	background: $color-brand;
 	display: inline-block;
 	@include border-radius(8*$border-radius-default);
