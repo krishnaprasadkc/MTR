@@ -19,6 +19,7 @@ body{
 .sidebar-wrapper{
 	background: $color-secondary;
 	position: relative;
+	/*Refer z-index*/
 }
 .main-content{
 	@extend .padding-1x;

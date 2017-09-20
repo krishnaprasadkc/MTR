@@ -1,6 +1,9 @@
 /*----------------------------------------
 					z-index
 ----------------------------------------*/
+.sidebar-wrapper{
+	z-index: 1;
+}
 .main-filter{
     z-index: 100;
     position: relative;

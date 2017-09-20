@@ -21,6 +21,7 @@
 			@extend .padding-top-1x;
 			@extend .padding-bottom-1x;
 			margin-bottom: 0;
+			border: solid 1px $color-secondary;
 		}
 		.condition-wrapper{
 			@extend .padding-left-1x;
@@ -48,13 +49,13 @@
 			}
 			.filter-label{
 				position: relative;
-				background: $color-grey-extralight;
 				border: solid 1px $color-grey-medium;
 				@include box-shadow(0, 0, 5px, rgba(0,0,0,.1));
+				@extend .smooth-gradient;
 				&:after{
 					position: absolute;
 					top: 0;
-					left: 98%;
+					left: 100%;
 					width: 15px;
 					height: 100%;
 					content: '';

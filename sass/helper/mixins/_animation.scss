@@ -1,0 +1,8 @@
+.smooth-gradient{
+	background: linear-gradient(91deg, $color-grey-light, $color-secondary);
+	background-size: 400% 400%;
+	-webkit-animation: smooth-gradient 7s ease infinite;
+	-moz-animation: smooth-gradient 7s ease infinite;
+	-o-animation: smooth-gradient 7s ease infinite;
+	animation: smooth-gradient 7s ease infinite;
+}

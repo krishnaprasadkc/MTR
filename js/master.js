@@ -367,6 +367,9 @@ $('.view-more a').click(function(){
   $(this).closest('.filter-section').toggleClass('pop-out animated fadeIn');
 });
 	
+$('.filter-back a').click(function(){
+	$('.filter-section').removeClass('pop-out');
+});	
 /*******************************************************************************
 ****************************Document Ready Closed******************************/ 
 });
