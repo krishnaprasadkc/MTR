@@ -2,8 +2,17 @@
 	padding-top: ($padding-default)-5;
 	@extend .padding-bottom-1x;
 	.filter-section{
-		padding-bottom: $padding-default+10;
-		border-bottom: solid 1px $color-brand-border;
+		padding-top: $padding-default+10;
+		.hr{
+			margin-left: $padding-default;
+			margin-right: $padding-default;
+		}
+		&:first-child{
+			padding-top: 0;
+			.hr{
+				display: none;
+			}
+		}
 		.filter-label{
 			text-transform: uppercase;
 			display: block;
@@ -34,6 +43,9 @@
 			FILTER EXPAND VIEW- .pop-out CLASS BASED
 		*********************************************/
 		&.pop-out{
+			.hr{
+				display: none;
+			}
 			.filter-label{
 				position: relative;
 				background: $color-grey-extralight;
@@ -78,6 +90,12 @@
 					}
 				}
 				.view-more{
+					display: none;
+				}
+			}
+			& +.filter-section{
+				padding-top: 0;
+				.hr{
 					display: none;
 				}
 			}
