@@ -348,25 +348,23 @@
 							INIT BOOTSTRAP PLUGINS
 1. TOOLTIP
 2. POPOVER
+3. FILTER EXPAND
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 $(document).ready(function(){
 	
 /*****************************Document Ready Starts******************************* 
 *********************************************************************************/
+//	1. TOOLTIP
 $('[data-toggle="tooltip"]').tooltip(); 
+
+//	2. POPOVER
 $('[data-toggle="popover"]').popover();  
 	
-$("[data-toggle=popover]").each(function(i, obj) {
-
-	$(this).popover({
-		html: true,
-		content: function() {
-		var id = $(this).attr('id')
-		return $('#popover-content-' + id).html();
-		}
-	});
-
+// 3. FITLER EXPAND
+$('.view-more a').click(function(){
+	$('.filter-section').removeClass('pop-out');
+  $(this).closest('.filter-section').toggleClass('pop-out animated fadeIn');
 });
 	
 /*******************************************************************************
