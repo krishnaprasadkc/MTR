@@ -8,15 +8,44 @@ Timeline
         border: 1px solid $color-grey-border;
         border-top: 0;
         padding: $padding-default *2 0;
-        .heading-default {
-            margin: 0;
-            color: $color-brand;
-        }
         .timeline-column-1 {
             text-align: left;
             margin-left: $padding-default;
-            h2 {
+            padding-right: $padding-default + 25;
+            position: relative;
+            .heading-default {
+                margin: 0;
+                color: $color-brand;
+                display: inline-block;
                 line-height: 45px;
+            }
+            .name-wrapper {
+                .value {
+                    @extend .heading-default;
+                    font-weight: $font-light;
+                    display: inline-block;
+                    float: right;
+                    line-height: 45px;
+                }
+            }
+            .info-popover{
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 28px;
+                line-height: 1;
+                padding: $padding-default/3 $padding-default/2;
+                color: $color-brand;
+                border: 2px solid $color-brand;
+                @include border-radius();
+                .fa{
+                    color: $color-brand;
+                }
+            }
+            .popover{
+                width: 300px;
             }
         }
         .timeline-column-2 {
@@ -79,8 +108,24 @@ Timeline
         >.timeline {
             background: $color-secondary;
             @include box-shadow();
-            &.panel{
+            &.panel {
                 margin-bottom: $padding-default;
+            }
+            &.open {
+                >.head {
+                    padding: $padding-default/1.5 0;
+                }
+            }
+        }
+        .status-wrapper {
+            label {
+                margin-right: $padding-default;
+            }
+            .status-default {
+                background: $color-brand;
+                padding: $padding-default/4 $padding-default/1.5;
+                @include border-radius(100px);
+                color: $color-secondary;
             }
         }
     }
@@ -102,7 +147,13 @@ Timeline
             width: 5px;
             left: 0px;
         }
-        &.panel{
+        &.open {
+            background: $color-brand-light;
+            &:before {
+                background: $color-brand;
+            }
+        }
+        &.panel {
             margin-bottom: 0;
         }
         &.open {
@@ -124,6 +175,11 @@ Timeline
                     background: $color-secondary;
                     &:before {
                         background: $color-brand;
+                    }
+                    .head {
+                        .heading-default {
+                            color: $color-brand;
+                        }
                     }
                 }
             }
