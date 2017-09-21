@@ -385,6 +385,12 @@ $('.container-fluid').css('padding-top', headerHeight);
 $('.sidebar-toggle-btn').click(function(){
 	$('body').toggleClass('toggle-sidebar');
 });
+
+/*------------------------------------
+		5. COLLAPSE LEFT PANEL
+------------------------------------*/	
+$('#AddProject').modal({backdrop: 'static', keyboard: false});
+
 /*******************************************************************************
 ****************************Document Ready Closed******************************/ 
 });

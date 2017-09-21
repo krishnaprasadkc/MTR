@@ -6,81 +6,172 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>Motorola:: Channel</title>
-	<script
-  src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="css/style.css" rel="stylesheet">
 	<style>
 		/****** NO USE CSS - ONLY FOR PRESENTATION */
-		.btn{
-/*			margin: 10px;*/
+		
+		.btn {
+			/*			margin: 10px;*/
 		}
 	</style>
 </head>
 
 <body>
-<div class="container-fluid">
-	
-	
-	
-	
-	<!-- BUTTON COMPONENTS STARTS -->
-	
-	<button class="btn btn-circle btn-primary" title="Create New Order" data-toggle="tooltip" data-placement="bottom">
-		<i class="fa fa-plus"></i>
-	</button>
-	
-	
+	<div class="container-fluid">
 
-	
-	<button class="btn btn-secondary">
-		<i class="fa fa-plus"></i>
-	</button>
-	
-	<button class="btn btn-squared btn-secondary">
-		<i class="fa fa-plus"></i>
-	</button>
-	
-	<button class="btn btn-squared btn-primary">
-		<i class="fa fa-plus"></i>
-	</button>
-	
-	<button class="btn btn-squared btn-primary">SQUARE BUTTON</button>
-	
-	<button class="btn btn-squared btn-secondary">SQUARE BUTTON</button>
-	
-	<button class="btn btn-secondary">DEFAULT BUTTON</button>
-	
-	<button class="btn btn-primary">DEFAULT BUTTON</button>
-	
-	<button class="btn btn-rounded btn-secondary">ROUNDED BUTTON</button>
-	
-	<button class="btn btn-rounded btn-primary">ROUNDED BUTTON</button>
-	
-	
-	<!-- BUTTON COMPONENTS ENDS -->
-	
-	<br/><br/><br/>
-	
-	<!-- FILTER CHIPS STARTS -->
-	
-	<div class="chips">
-		<span class="chips-text">Asia Emerging</span>
-		<a href="#"><i class="fa fa-close chips-icon"></i></a>
+
+
+
+		<!-- BUTTON COMPONENTS STARTS -->
+
+		<button class="btn btn-circle btn-primary" title="Create New Order" data-toggle="tooltip" data-placement="bottom">
+			<i class="fa fa-plus"></i>
+		</button>
+
+
+		<button class="btn btn-secondary" data-toggle="modal" data-target="#AddProject" data-backdrop="static" data-keyboard="false">
+			<i class="fa fa-plus"></i>
+		</button>
+
+		<button class="btn btn-squared btn-secondary">
+			<i class="fa fa-plus"></i>
+		</button>
+
+		<button class="btn btn-squared btn-primary">
+			<i class="fa fa-plus"></i>
+		</button>
+
+		<button class="btn btn-squared btn-primary">SQUARE BUTTON</button>
+
+		<button class="btn btn-squared btn-secondary">SQUARE BUTTON</button>
+
+		<button class="btn btn-secondary">DEFAULT BUTTON</button>
+
+		<button class="btn btn-primary">DEFAULT BUTTON</button>
+
+		<button class="btn btn-rounded btn-secondary">ROUNDED BUTTON</button>
+
+		<button class="btn btn-rounded btn-primary">ROUNDED BUTTON</button>
+
+
+		<!-- BUTTON COMPONENTS ENDS -->
+
+		<br/>
+		<br/>
+		<br/>
+
+		<!-- FILTER CHIPS STARTS -->
+
+		<div class="chips">
+			<span class="chips-text">Asia Emerging</span>
+			<a href="#"><i class="fa fa-close chips-icon"></i></a>
+		</div>
+
+		<div class="chips disabled">
+			<span class="chips-text">Asia Emerging</span>
+			<a href="#"><i class="fa fa-close chips-icon"></i></a>
+		</div>
+
+		<!-- FILTER CHIPS ENDS -->
+
+
+		<div id="AddProject" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add an Item</h4>
+					</div>
+					<div class="modal-body">
+
+						<!--- FORM CONTENT STARTS --->
+
+						<section class="form-input-wrapper">
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-5 col-sm-offset-2">
+									<div class="form-group">
+									  <input type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h3 class="col-sm-12"><strong>Line Item</strong> Details</h3>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<div class="form-group">
+									  		<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						
+						
+						<section class="form-grid-wrapper">
+						grid
+						</section>
+
+
+						<!--- FORM CONTENT ENDS --->
+
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
 	</div>
-	
-	<div class="chips disabled">
-		<span class="chips-text">Asia Emerging</span>
-		<a href="#"><i class="fa fa-close chips-icon"></i></a>
-	</div>
-	
-	<!-- FILTER CHIPS ENDS -->
-	
-	
-</div>
-<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/master.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,18 @@
+.modal-backdrop{
+	background: $color-secondary;
+}
+.modal-dialog{
+	width: 95%;
+	max-width: 1000px;
+	.modal-title{
+		&:before{
+			background: $color-brand;
+			content: '';
+		}
+	}
+	.modal-content{
+		border: none 0px;
+		border-radius: 0;
+		 @include box-shadow($top:0, $left:0, $blur:30px, $color:rgba(0,0,0,.1));
+	}
+}
