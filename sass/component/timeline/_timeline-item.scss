@@ -76,7 +76,8 @@ Timeline
             line-height: 45px;
             .btn {
                 background: $color-brand;
-                min-width: 44px;
+                min-width: 34px;
+                padding: $padding-default/3 $padding-default/1.5;
                 position: relative;
                 .fa {
                     color: $color-secondary;
@@ -200,7 +201,7 @@ Timeline
         }
         &.open {
             .head .heading-default {
-                color: $color-grey-extradark;
+                color: $color-grey-dark;
             }
         }
         .timeline {
@@ -208,10 +209,16 @@ Timeline
             &:before {
                 background: $color-grey-dark;
             }
+            .head .heading-default {
+                color: $color-grey-extradark;
+            }
             .timeline {
                 background: $color-grey-extralight;
                 &:before {
                     background: $color-grey-medium;
+                }
+                .head .heading-default {
+                    color: $color-primary;
                 }
                 .timeline {
                     background: $color-secondary;
