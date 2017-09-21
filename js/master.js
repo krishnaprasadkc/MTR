@@ -395,6 +395,7 @@ $('.slimScroll').slimScroll({
     disableFadeOut: true,
     railVisible: true,
     alwaysVisible: true,
+    wheelStep: 5,
 //    allowPageScroll: true,
 });
 /*******************************************************************************
