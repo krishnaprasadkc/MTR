@@ -8,6 +8,7 @@ Timeline
         border: 1px solid $color-grey-border;
         border-top: 0;
         padding: $padding-default *2 0;
+        @include transition();
         .row{
             display: -ms-flexbox;
             display: -webkit-flex;
@@ -32,11 +33,12 @@ Timeline
                 color: $color-brand;
                 display: inline-block;
                 line-height: 45px;
+                @include transition();
             }
             .name-wrapper {
                 .value {
                     @extend .heading-default;
-                    font-weight: $font-light;
+                    font-weight: $font-regular;
                     display: inline-block;
                     float: right;
                     line-height: 45px;
@@ -128,17 +130,17 @@ Timeline
             border-bottom: 1px solid $color-brand;
             box-shadow: none;
             @include border-radius(0);
-            padding-left: $padding-default;
-            padding-right: $padding-default;
+            padding: 0;
             text-align: center;
         }
         .fa,i{
             position: absolute;
-            right: 0px;
+            left: 100%;
             height: 15px;
             top: 0;
             bottom: 0;
             margin: auto;
+            margin-left: $padding-default/3;
             color: $color-brand;
         }
     }
@@ -184,6 +186,7 @@ Timeline
             height: 100%;
             width: 5px;
             left: 0px;
+            @include transition();
         }
         &.open {
             background: $color-brand-light;
@@ -196,7 +199,7 @@ Timeline
         }
         &.open {
             .head .heading-default {
-                color: $color-primary;
+                color: $color-grey-extradark;
             }
         }
         .timeline {

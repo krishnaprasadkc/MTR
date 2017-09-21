@@ -6,3 +6,10 @@
 	-o-animation: smooth-gradient 7s ease infinite;
 	animation: smooth-gradient 7s ease infinite;
 }
+@mixin transition($property : all, $time : .3s, $function : ease-in) {
+    -webkit-transition: $property $time $function;
+    -moz-transition: $property $time $function;
+    -ms-transition: $property $time $function;
+    -o-transition: $property $time $function;
+    transition: $property $time $function;
+}
