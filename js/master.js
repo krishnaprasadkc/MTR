@@ -402,8 +402,13 @@ $('.slimScroll').slimScroll({
     railVisible: true,
     alwaysVisible: true,
     wheelStep: 5,
-//    allowPageScroll: true,
+    allowPageScroll: true,
 });
+<<<<<<< .mine
+
+=======
+
+>>>>>>> .theirs
 /*******************************************************************************
 ****************************Document Ready Closed******************************/ 
 });
