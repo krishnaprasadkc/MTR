@@ -44,6 +44,8 @@ $color-brand-border: lighten($color-brand, 80%); 	//c9c9c9
 /*******************/
 
 $color-primary: #0a0c0d ;
+$color-primary-medium: lighten(#0a0c0d,30) ;
+$color-primary-light: lighten(#0a0c0d,50) ;
 $color-secondary: rgb(255, 255, 255); 	//fff
 
 /*******************/
@@ -60,7 +62,7 @@ $color-grey-medium: #e0e0e0;
 $color-grey-light: #f1f1f1;
 $color-grey-extralight: #f4f4f4;
 
-$color-grey-border: $color-grey-dark;
+$color-grey-border: $color-grey-medium;
 
 
 $icon-grey: #747474; 	//747474
