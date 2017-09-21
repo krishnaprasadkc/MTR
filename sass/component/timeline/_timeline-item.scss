@@ -1,3 +1,226 @@
 /*----------------------------------------
 Timeline
 ----------------------------------------*/
+
+.timeline-wrapper {
+    padding: $padding-default;
+    .head {
+        border: 1px solid $color-grey-border;
+        border-top: 0;
+        padding: $padding-default *2 0;
+        .row{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;             
+        }
+        .timeline-column-1 {
+            text-align: left;
+            margin-left: $padding-default;
+            padding-right: $padding-default + 25;
+            position: relative;
+            .heading-default {
+                margin: 0;
+                color: $color-brand;
+                display: inline-block;
+                line-height: 45px;
+            }
+            .name-wrapper {
+                .value {
+                    @extend .heading-default;
+                    font-weight: $font-light;
+                    display: inline-block;
+                    float: right;
+                    line-height: 45px;
+                }
+            }
+            .info-popover{
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 28px;
+                line-height: 1;
+                padding: $padding-default/3 $padding-default/2;
+                color: $color-brand;
+                border: 2px solid $color-brand;
+                @include border-radius();
+                .fa{
+                    color: $color-brand;
+                }
+            }
+            .popover{
+                width: 300px;
+            }
+        }
+        .timeline-column-2 {
+            text-align: center;
+        }
+        .timeline-column-3 {
+            text-align: center;
+        }
+        .timeline-column-4 {
+            text-align: center;
+            margin-right: $padding-default;
+            line-height: 45px;
+            .btn {
+                background: $color-brand;
+                min-width: 44px;
+                position: relative;
+                .fa {
+                    color: $color-secondary;
+                    font-size: $font-default +8;
+                    line-height: 24px;
+                }
+                &.collapsed {
+                    @include button-color($color-grey-medium, $color-primary);
+                    .fa-angle-up {
+                        display: none;
+                    }
+                    .fa-angle-down {
+                        display: block;
+                    }
+                }
+                .fa-angle-down {
+                    display: none;
+                }
+                .fa-angle-up {
+                    display: block;
+                }
+            }
+            .dropdown {
+                display: inline-block;
+            }
+        }
+        .calendar-timeline {
+            border: 0;
+            background: none;
+            .body {
+                padding: 0;
+            }
+        }
+    }
+    .item-count {
+        border: 1px solid $color-grey-border;
+        @include border-radius(100px);
+        display: inline-block;
+        line-height: 43px;
+        min-width: 45px;
+        padding: 0 $padding-default /1.5;
+        color: $color-primary;
+    }
+    .item-edit{
+        display: none;
+        position: relative;
+        width: 70%;
+        margin: auto;
+        input{
+            border: 0;
+            border-bottom: 1px solid $color-brand;
+            box-shadow: none;
+            @include border-radius(0);
+            padding-left: $padding-default;
+            padding-right: $padding-default;
+            text-align: center;
+        }
+        .fa,i{
+            position: absolute;
+            right: 0px;
+            height: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: $color-brand;
+        }
+    }
+    .timeline-level-1 {
+        >.timeline {
+            background: $color-secondary;
+            @include box-shadow();
+            &.panel {
+                margin-bottom: $padding-default;
+            }
+            &.open {
+                >.head {
+                    padding: $padding-default/1.5 0;
+                }
+            }
+        }
+        .status-wrapper {
+            label {
+                margin-right: $padding-default;
+            }
+            .status-default {
+                background: $color-brand;
+                padding: $padding-default/4 $padding-default/1.5;
+                @include border-radius(100px);
+                color: $color-secondary;
+            }
+        }
+    }
+    /*Timeline level 2*/
+    .timeline-level-2 {
+        .head {
+            padding: $padding-default/1.5 0;
+        }
+    }
+    /*Timeline head color*/
+    .timeline {
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        &:before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 5px;
+            left: 0px;
+        }
+        &.open {
+            background: $color-brand-light;
+            &:before {
+                background: $color-brand;
+            }
+        }
+        &.panel {
+            margin-bottom: 0;
+        }
+        &.open {
+            .head .heading-default {
+                color: $color-primary;
+            }
+        }
+        .timeline {
+            background: $color-grey-light;
+            &:before {
+                background: $color-grey-dark;
+            }
+            .timeline {
+                background: $color-grey-extralight;
+                &:before {
+                    background: $color-grey-medium;
+                }
+                .timeline {
+                    background: $color-secondary;
+                    &:before {
+                        background: $color-brand;
+                    }
+                    .head {
+                        .heading-default {
+                            color: $color-brand;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

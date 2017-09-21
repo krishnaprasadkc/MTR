@@ -1,7 +1,22 @@
 /*----------------------------------------
-z-index
+					z-index
 ----------------------------------------*/
+.sidebar-wrapper{
+	z-index: 1;
+}
 .main-filter{
     z-index: 100;
     position: relative;
+}
+.filter-section{
+	&.pop-out{
+		.condition-wrapper{
+			z-index: 101;
+		}
+		.filter-label{
+			&:after{
+				z-index: 102;
+			}
+		}
+	}
 }

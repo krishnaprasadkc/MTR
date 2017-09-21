@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head1" runat="server">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>Motorola:: Channel</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<!-- HEADER STARTS -->
+
+		<header class="header-wrapper navbar-fixed-top">
+
+			<!-- Brand Logo-->
+			<div class="col-xs-2 brand-logo">
+				<a href="#"><img src="image/logo.png" class="img-responsive" /></a>
+			</div>
+
+			<!-- Filter Switch-->
+			<div class="col-xs-3">
+				<div class="btn-group filter-switch">
+					<button type="button" class="btn">
+						<i class="fa fa-align-left" aria-hidden="true"></i> Quarterly
+					</button>
+					<button type="button" class="btn active">
+						<i class="fa fa-windows" aria-hidden="true"></i> Monthly
+					</button>
+				</div>
+			</div>
+
+			<!-- Menu & Search-->
+			<div class="col-xs-7 nav-search-wrapper">
+
+				<nav class="clearfix text-right">
+					
+					<!-- User Profile-->
+					<div class="user-profile pull-right">
+						<img src="image/boy.png" class="img-circle user-avatar" alt="Cinque Terre" width="50" height="50">
+						<div class="user-wrapper">
+							<div class="user-name ellipsis">Bradly Bivens</div>
+							<small class="user-designation ellipsis">Regional Head</small>
+						</div>
+						<a href="#" class="pull-right logout">
+							<i class="fa fa-2x fa-power-off fa-rotate-90" aria-hidden="true"></i>
+						</a>
+					</div>
+					
+					<div class="nav-items collapse navbar-collapse animated bounceInDown" id="top-nav">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">NAV MENU ONE</a></li>
+							<li><a href="#">NAV MENU TWO</a></li>
+							<li><a href="#">NAV MENU THREE</a></li>
+						</ul>
+					</div>
+					<div class="search-input collapse navbar-collapse animated bounceInDown" id="search">
+						<input type="text" placeholder="Quick Search" class="form-control">
+					</div>
+
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					
+				</nav>
+				
+			</div>
+		</header>
+
+		<!-- HEADER ENDS -->
+
+		<!-- FORECAST PAGE STARTS -->
+		
+		<div class="row">
+
+			<!--********************************************
+							FILTER LEFT SIDEBAR STARTS
+			********************************************--->
+			<div class="col-xs-2 sidebar-wrapper">
+				<div class="filter-sidebar clearfix">
+					
+					<!-- Sample Filter Set 1 --->
+					<section class="row filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 2 --->
+					<section class="row filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 3 with EXPAND view --->
+					<section class="row filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Filter + View More click</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 4 --->
+					<section class="row filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+
+					</section>
+
+					<!-- Sample Filter Set 5 --->
+					<section class="row filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+				
+				<!-- SIDEBAR EXPAND/COLLAPSE BUTTON STARTS -->
+					<div class="sidebar-toggle">
+						<a href="#" class="sidebar-toggle-btn">
+							<i class="fa fa-reply" aria-hidden="true"></i>
+						</a>
+					</div>
+				<!-- SIDEBAR EXPAND/COLLAPSE BUTTON STARTS -->
+				
+			</div>
+			<!--**********************************************
+							FILTER LEFT SIDEBAR ENDS
+			**********************************************--->
+			
+			<!--********************************************
+							TIMELINE PAGE STARTS
+			********************************************--->
+
+			<div class="col-xs-10 col-xs-offset-2 main-content">
+				Timeline page content here
+			</div>
+
+		</div>
+		
+		<!--********************************************
+							TIMELINE PAGE ENDS
+		********************************************--->
+
+
+
+	</div>
+	<script type="text/javascript" src="js/master.js"></script>
+</body>
+
+</html>

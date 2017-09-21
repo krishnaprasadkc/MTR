@@ -2,7 +2,7 @@
 Calendar
 ----------------------------------------*/
 .calendar-timeline {
-    background: $color-brand-light;
+    background: $color-secondary;
     border: 1px solid $color-grey-border;
     @include border-radius();
     text-align: center;
@@ -28,19 +28,35 @@ Calendar
             font-size: $font-default * 2;
             padding: 0 $padding-default /1.5;
             line-height: 1;
-            i {
-                color: $color-brand-light;
-            }
         }
     }
     .body {
-        padding: $padding-default / 2 $padding-default / 3;
+        padding: $padding-default / 2 0;
         text-align: center;
         color: $color-brand;
-        display: table;
-        width: 100%;
-        >div {
-            display: table-cell;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        >.column {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+//            border: 1px dashed;
         }
     }
 }

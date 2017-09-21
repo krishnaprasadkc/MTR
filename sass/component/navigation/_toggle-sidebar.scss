@@ -1,0 +1,40 @@
+body{
+	&.toggle-sidebar{
+		.main-content{
+			width: 97%;
+			margin-left: 3%;
+		}
+		.sidebar-wrapper{
+			width: 0;
+			.filter-sidebar{
+				display: none;
+			}
+			.sidebar-toggle {
+				.sidebar-toggle-btn {
+					.fa-reply {
+						&:before{
+							content: '\f064';
+						}
+					}
+				}
+			}
+		}
+	}
+	.sidebar-toggle {
+		background: $color-grey-light;
+		@include border-radius(50%);
+		@include box-shadow();
+		position: absolute;
+		top: 0;
+		right: -($padding-default);
+		bottom: 0;
+		width: 32px;
+		height: 32px;
+		margin: auto;
+		.sidebar-toggle-btn {
+			text-decoration: none;
+			line-height: $line-height+1;
+			padding: ($padding-default)-5;
+		}
+	}
+}
