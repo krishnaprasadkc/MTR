@@ -1,346 +1,347 @@
-
 /*------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 							BUTTON WAVE EFFECT STARTS HERE
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-(function(window) {
-  "use strict";
-  var Waves = Waves || {};
-  var $$ = document.querySelectorAll.bind(document);
+(function (window) {
+    "use strict";
+    var Waves = Waves || {};
+    var $$ = document.querySelectorAll.bind(document);
 
-  // Find exact position of element
-  function isWindow(obj) {
-    return obj !== null && obj === obj.window;
-  }
-
-  function getWindow(elem) {
-    return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
-  }
-
-  function offset(elem) {
-    var docElem,
-      win,
-      box = { top: 0, left: 0 },
-      doc = elem && elem.ownerDocument;
-
-    docElem = doc.documentElement;
-
-    if (typeof elem.getBoundingClientRect !== typeof undefined) {
-      box = elem.getBoundingClientRect();
-    }
-    win = getWindow(doc);
-    return {
-      top: box.top + win.pageYOffset - docElem.clientTop,
-      left: box.left + win.pageXOffset - docElem.clientLeft
-    };
-  }
-
-  function convertStyle(obj) {
-    var style = "";
-
-    for (var a in obj) {
-      if (obj.hasOwnProperty(a)) {
-        style += a + ":" + obj[a] + ";";
-      }
+    // Find exact position of element
+    function isWindow(obj) {
+        return obj !== null && obj === obj.window;
     }
 
-    return style;
-  }
+    function getWindow(elem) {
+        return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
+    }
 
-  var Effect = {
-    // Effect delay
-    duration: 750,
+    function offset(elem) {
+        var docElem,
+            win,
+            box = {
+                top: 0,
+                left: 0
+            },
+            doc = elem && elem.ownerDocument;
 
-    show: function(e, element) {
-      // Disable right click
-      if (e.button === 2) {
-        return false;
-      }
+        docElem = doc.documentElement;
 
-      var el = element || this;
-
-      // Create ripple
-      var ripple = document.createElement("div");
-      ripple.className = "waves-ripple";
-      el.appendChild(ripple);
-
-      // Get click coordinate and element witdh
-      var pos = offset(el);
-      var relativeY = e.pageY - pos.top;
-      var relativeX = e.pageX - pos.left;
-      var scale = "scale(" + el.clientWidth / 100 * 10 + ")";
-
-      // Support for touch devices
-      if ("touches" in e) {
-        relativeY = e.touches[0].pageY - pos.top;
-        relativeX = e.touches[0].pageX - pos.left;
-      }
-
-      // Attach data to element
-      ripple.setAttribute("data-hold", Date.now());
-      ripple.setAttribute("data-scale", scale);
-      ripple.setAttribute("data-x", relativeX);
-      ripple.setAttribute("data-y", relativeY);
-
-      // Set ripple position
-      var rippleStyle = {
-        top: relativeY + "px",
-        left: relativeX + "px"
-      };
-
-      ripple.className = ripple.className + " waves-notransition";
-      ripple.setAttribute("style", convertStyle(rippleStyle));
-      ripple.className = ripple.className.replace("waves-notransition", "");
-
-      // Scale the ripple
-      rippleStyle["-webkit-transform"] = scale;
-      rippleStyle["-moz-transform"] = scale;
-      rippleStyle["-ms-transform"] = scale;
-      rippleStyle["-o-transform"] = scale;
-      rippleStyle.transform = scale;
-      rippleStyle.opacity = "1";
-
-      rippleStyle["-webkit-transition-duration"] = Effect.duration + "ms";
-      rippleStyle["-moz-transition-duration"] = Effect.duration + "ms";
-      rippleStyle["-o-transition-duration"] = Effect.duration + "ms";
-      rippleStyle["transition-duration"] = Effect.duration + "ms";
-
-      rippleStyle["-webkit-transition-timing-function"] =
-        "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
-      rippleStyle["-moz-transition-timing-function"] =
-        "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
-      rippleStyle["-o-transition-timing-function"] =
-        "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
-      rippleStyle["transition-timing-function"] =
-        "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
-
-      ripple.setAttribute("style", convertStyle(rippleStyle));
-    },
-
-    hide: function(e) {
-      TouchHandler.touchup(e);
-
-      var el = this;
-      var width = el.clientWidth * 1.4;
-
-      // Get first ripple
-      var ripple = null;
-      var ripples = el.getElementsByClassName("waves-ripple");
-      if (ripples.length > 0) {
-        ripple = ripples[ripples.length - 1];
-      } else {
-        return false;
-      }
-
-      var relativeX = ripple.getAttribute("data-x");
-      var relativeY = ripple.getAttribute("data-y");
-      var scale = ripple.getAttribute("data-scale");
-
-      // Get delay beetween mousedown and mouse leave
-      var diff = Date.now() - Number(ripple.getAttribute("data-hold"));
-      var delay = 350 - diff;
-
-      if (delay < 0) {
-        delay = 0;
-      }
-
-      // Fade out ripple after delay
-      setTimeout(function() {
-        var style = {
-          top: relativeY + "px",
-          left: relativeX + "px",
-          opacity: "0",
-
-          // Duration
-          "-webkit-transition-duration": Effect.duration + "ms",
-          "-moz-transition-duration": Effect.duration + "ms",
-          "-o-transition-duration": Effect.duration + "ms",
-          "transition-duration": Effect.duration + "ms",
-          "-webkit-transform": scale,
-          "-moz-transform": scale,
-          "-ms-transform": scale,
-          "-o-transform": scale,
-          transform: scale
-        };
-
-        ripple.setAttribute("style", convertStyle(style));
-
-        setTimeout(function() {
-          try {
-            el.removeChild(ripple);
-          } catch (e) {
-            return false;
-          }
-        }, Effect.duration);
-      }, delay);
-    },
-
-    // Little hack to make <input> can perform waves effect
-    wrapInput: function(elements) {
-      for (var a = 0; a < elements.length; a++) {
-        var el = elements[a];
-
-        if (el.tagName.toLowerCase() === "input") {
-          var parent = el.parentNode;
-
-          // If input already have parent just pass through
-          if (
-            parent.tagName.toLowerCase() === "i" &&
-            parent.className.indexOf("btn") !== -1
-          ) {
-            continue;
-          }
-
-          // Put element class and style to the specified parent
-          var wrapper = document.createElement("i");
-          wrapper.className = el.className + " waves-input-wrapper";
-
-          var elementStyle = el.getAttribute("style");
-
-          if (!elementStyle) {
-            elementStyle = "";
-          }
-
-          wrapper.setAttribute("style", elementStyle);
-
-          el.className = "waves-button-input";
-          el.removeAttribute("style");
-
-          // Put element as child
-          parent.replaceChild(wrapper, el);
-          wrapper.appendChild(el);
+        if (typeof elem.getBoundingClientRect !== typeof undefined) {
+            box = elem.getBoundingClientRect();
         }
-      }
+        win = getWindow(doc);
+        return {
+            top: box.top + win.pageYOffset - docElem.clientTop,
+            left: box.left + win.pageXOffset - docElem.clientLeft
+        };
     }
-  };
 
-  /**
+    function convertStyle(obj) {
+        var style = "";
+
+        for (var a in obj) {
+            if (obj.hasOwnProperty(a)) {
+                style += a + ":" + obj[a] + ";";
+            }
+        }
+
+        return style;
+    }
+
+    var Effect = {
+        // Effect delay
+        duration: 750,
+
+        show: function (e, element) {
+            // Disable right click
+            if (e.button === 2) {
+                return false;
+            }
+
+            var el = element || this;
+
+            // Create ripple
+            var ripple = document.createElement("div");
+            ripple.className = "waves-ripple";
+            el.appendChild(ripple);
+
+            // Get click coordinate and element witdh
+            var pos = offset(el);
+            var relativeY = e.pageY - pos.top;
+            var relativeX = e.pageX - pos.left;
+            var scale = "scale(" + el.clientWidth / 100 * 10 + ")";
+
+            // Support for touch devices
+            if ("touches" in e) {
+                relativeY = e.touches[0].pageY - pos.top;
+                relativeX = e.touches[0].pageX - pos.left;
+            }
+
+            // Attach data to element
+            ripple.setAttribute("data-hold", Date.now());
+            ripple.setAttribute("data-scale", scale);
+            ripple.setAttribute("data-x", relativeX);
+            ripple.setAttribute("data-y", relativeY);
+
+            // Set ripple position
+            var rippleStyle = {
+                top: relativeY + "px",
+                left: relativeX + "px"
+            };
+
+            ripple.className = ripple.className + " waves-notransition";
+            ripple.setAttribute("style", convertStyle(rippleStyle));
+            ripple.className = ripple.className.replace("waves-notransition", "");
+
+            // Scale the ripple
+            rippleStyle["-webkit-transform"] = scale;
+            rippleStyle["-moz-transform"] = scale;
+            rippleStyle["-ms-transform"] = scale;
+            rippleStyle["-o-transform"] = scale;
+            rippleStyle.transform = scale;
+            rippleStyle.opacity = "1";
+
+            rippleStyle["-webkit-transition-duration"] = Effect.duration + "ms";
+            rippleStyle["-moz-transition-duration"] = Effect.duration + "ms";
+            rippleStyle["-o-transition-duration"] = Effect.duration + "ms";
+            rippleStyle["transition-duration"] = Effect.duration + "ms";
+
+            rippleStyle["-webkit-transition-timing-function"] =
+                "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
+            rippleStyle["-moz-transition-timing-function"] =
+                "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
+            rippleStyle["-o-transition-timing-function"] =
+                "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
+            rippleStyle["transition-timing-function"] =
+                "cubic-bezier(0.250, 0.460, 0.450, 0.940)";
+
+            ripple.setAttribute("style", convertStyle(rippleStyle));
+        },
+
+        hide: function (e) {
+            TouchHandler.touchup(e);
+
+            var el = this;
+            var width = el.clientWidth * 1.4;
+
+            // Get first ripple
+            var ripple = null;
+            var ripples = el.getElementsByClassName("waves-ripple");
+            if (ripples.length > 0) {
+                ripple = ripples[ripples.length - 1];
+            } else {
+                return false;
+            }
+
+            var relativeX = ripple.getAttribute("data-x");
+            var relativeY = ripple.getAttribute("data-y");
+            var scale = ripple.getAttribute("data-scale");
+
+            // Get delay beetween mousedown and mouse leave
+            var diff = Date.now() - Number(ripple.getAttribute("data-hold"));
+            var delay = 350 - diff;
+
+            if (delay < 0) {
+                delay = 0;
+            }
+
+            // Fade out ripple after delay
+            setTimeout(function () {
+                var style = {
+                    top: relativeY + "px",
+                    left: relativeX + "px",
+                    opacity: "0",
+
+                    // Duration
+                    "-webkit-transition-duration": Effect.duration + "ms",
+                    "-moz-transition-duration": Effect.duration + "ms",
+                    "-o-transition-duration": Effect.duration + "ms",
+                    "transition-duration": Effect.duration + "ms",
+                    "-webkit-transform": scale,
+                    "-moz-transform": scale,
+                    "-ms-transform": scale,
+                    "-o-transform": scale,
+                    transform: scale
+                };
+
+                ripple.setAttribute("style", convertStyle(style));
+
+                setTimeout(function () {
+                    try {
+                        el.removeChild(ripple);
+                    } catch (e) {
+                        return false;
+                    }
+                }, Effect.duration);
+            }, delay);
+        },
+
+        // Little hack to make <input> can perform waves effect
+        wrapInput: function (elements) {
+            for (var a = 0; a < elements.length; a++) {
+                var el = elements[a];
+
+                if (el.tagName.toLowerCase() === "input") {
+                    var parent = el.parentNode;
+
+                    // If input already have parent just pass through
+                    if (
+                        parent.tagName.toLowerCase() === "i" &&
+                        parent.className.indexOf("btn") !== -1
+                    ) {
+                        continue;
+                    }
+
+                    // Put element class and style to the specified parent
+                    var wrapper = document.createElement("i");
+                    wrapper.className = el.className + " waves-input-wrapper";
+
+                    var elementStyle = el.getAttribute("style");
+
+                    if (!elementStyle) {
+                        elementStyle = "";
+                    }
+
+                    wrapper.setAttribute("style", elementStyle);
+
+                    el.className = "waves-button-input";
+                    el.removeAttribute("style");
+
+                    // Put element as child
+                    parent.replaceChild(wrapper, el);
+                    wrapper.appendChild(el);
+                }
+            }
+        }
+    };
+
+    /**
      * Disable mousedown event for 500ms during and after touch
      */
-  var TouchHandler = {
-    /* uses an integer rather than bool so there's no issues with
+    var TouchHandler = {
+        /* uses an integer rather than bool so there's no issues with
          * needing to clear timeouts if another touch event occurred
          * within the 500ms. Cannot mouseup between touchstart and
          * touchend, nor in the 500ms after touchend. */
-    touches: 0,
-    allowEvent: function(e) {
-      var allow = true;
+        touches: 0,
+        allowEvent: function (e) {
+            var allow = true;
 
-      if (e.type === "touchstart") {
-        TouchHandler.touches += 1; //push
-      } else if (e.type === "touchend" || e.type === "touchcancel") {
-        setTimeout(function() {
-          if (TouchHandler.touches > 0) {
-            TouchHandler.touches -= 1; //pop after 500ms
-          }
-        }, 500);
-      } else if (e.type === "mousedown" && TouchHandler.touches > 0) {
-        allow = false;
-      }
+            if (e.type === "touchstart") {
+                TouchHandler.touches += 1; //push
+            } else if (e.type === "touchend" || e.type === "touchcancel") {
+                setTimeout(function () {
+                    if (TouchHandler.touches > 0) {
+                        TouchHandler.touches -= 1; //pop after 500ms
+                    }
+                }, 500);
+            } else if (e.type === "mousedown" && TouchHandler.touches > 0) {
+                allow = false;
+            }
 
-      return allow;
-    },
-    touchup: function(e) {
-      TouchHandler.allowEvent(e);
-    }
-  };
+            return allow;
+        },
+        touchup: function (e) {
+            TouchHandler.allowEvent(e);
+        }
+    };
 
-  /**
+    /**
      * Delegated click handler for .btn element.
      * returns null when .btn element not in "click tree"
      */
-  function getWavesEffectElement(e) {
-    if (TouchHandler.allowEvent(e) === false) {
-      return null;
+    function getWavesEffectElement(e) {
+        if (TouchHandler.allowEvent(e) === false) {
+            return null;
+        }
+
+        var element = null;
+        var target = e.target || e.srcElement;
+
+        while (target.parentElement !== null) {
+            if (!(target instanceof SVGElement) &&
+                target.className.indexOf("btn") !== -1
+            ) {
+                element = target;
+                break;
+            } else if (target.classList.contains("btn")) {
+                element = target;
+                break;
+            }
+            target = target.parentElement;
+        }
+
+        return element;
     }
 
-    var element = null;
-    var target = e.target || e.srcElement;
-
-    while (target.parentElement !== null) {
-      if (
-        !(target instanceof SVGElement) &&
-        target.className.indexOf("btn") !== -1
-      ) {
-        element = target;
-        break;
-      } else if (target.classList.contains("btn")) {
-        element = target;
-        break;
-      }
-      target = target.parentElement;
-    }
-
-    return element;
-  }
-
-  /**
+    /**
      * Bubble the click and show effect if .btn elem was found
      */
-  function showEffect(e) {
-    var element = getWavesEffectElement(e);
+    function showEffect(e) {
+        var element = getWavesEffectElement(e);
 
-    if (element !== null) {
-      Effect.show(e, element);
+        if (element !== null) {
+            Effect.show(e, element);
 
-      if ("ontouchstart" in window) {
-        element.addEventListener("touchend", Effect.hide, false);
-        element.addEventListener("touchcancel", Effect.hide, false);
-      }
+            if ("ontouchstart" in window) {
+                element.addEventListener("touchend", Effect.hide, false);
+                element.addEventListener("touchcancel", Effect.hide, false);
+            }
 
-      element.addEventListener("mouseup", Effect.hide, false);
-      element.addEventListener("mouseleave", Effect.hide, false);
-    }
-  }
-
-  Waves.displayEffect = function(options) {
-    options = options || {};
-
-    if ("duration" in options) {
-      Effect.duration = options.duration;
+            element.addEventListener("mouseup", Effect.hide, false);
+            element.addEventListener("mouseleave", Effect.hide, false);
+        }
     }
 
-    //Wrap input inside <i> tag
-    Effect.wrapInput($$(".btn"));
+    Waves.displayEffect = function (options) {
+        options = options || {};
 
-    if ("ontouchstart" in window) {
-      document.body.addEventListener("touchstart", showEffect, false);
-    }
+        if ("duration" in options) {
+            Effect.duration = options.duration;
+        }
 
-    document.body.addEventListener("mousedown", showEffect, false);
-  };
+        //Wrap input inside <i> tag
+        Effect.wrapInput($$(".btn"));
 
-  /**
+        if ("ontouchstart" in window) {
+            document.body.addEventListener("touchstart", showEffect, false);
+        }
+
+        document.body.addEventListener("mousedown", showEffect, false);
+    };
+
+    /**
      * Attach Waves to an input element (or any element which doesn't
      * bubble mouseup/mousedown events).
      *   Intended to be used with dynamically loaded forms/inputs, or
      * where the user doesn't want a delegated click handler.
      */
-  Waves.attach = function(element) {
-    //FUTURE: automatically add waves classes and allow users
-    // to specify them with an options param? Eg. light/classic/button
-    if (element.tagName.toLowerCase() === "input") {
-      Effect.wrapInput([element]);
-      element = element.parentElement;
-    }
+    Waves.attach = function (element) {
+        //FUTURE: automatically add waves classes and allow users
+        // to specify them with an options param? Eg. light/classic/button
+        if (element.tagName.toLowerCase() === "input") {
+            Effect.wrapInput([element]);
+            element = element.parentElement;
+        }
 
-    if ("ontouchstart" in window) {
-      element.addEventListener("touchstart", showEffect, false);
-    }
+        if ("ontouchstart" in window) {
+            element.addEventListener("touchstart", showEffect, false);
+        }
 
-    element.addEventListener("mousedown", showEffect, false);
-  };
+        element.addEventListener("mousedown", showEffect, false);
+    };
 
-  window.Waves = Waves;
+    window.Waves = Waves;
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-      Waves.displayEffect();
-    },
-    false
-  );
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            Waves.displayEffect();
+        },
+        false
+    );
 })(window);
 
 /*------------------------------------------------------------------------------
@@ -351,60 +352,117 @@
 3. FILTER EXPAND
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-$(document).ready(function(){
-	
-/*****************************Document Ready Starts******************************* 
-*********************************************************************************/
+$(document).ready(function () {
 
-/*------------------------------------
-		1. TOOLTIP
-------------------------------------*/
-$('[data-toggle="tooltip"]').tooltip(); 
+    /*****************************Document Ready Starts******************************* 
+     *********************************************************************************/
 
-/*------------------------------------
-		2. POPOVER
-------------------------------------*/
-$('[data-toggle="popover"]').popover();  
-	
-/*------------------------------------
-		3. FILTER EXPAND
-------------------------------------*/
-$('.view-more a').click(function(){
-	$('.filter-section').removeClass('pop-out');
-  $(this).closest('.filter-section').toggleClass('pop-out animated fadeIn');
-});
-	
-$('.filter-back a').click(function(){
-	$('.filter-section').removeClass('pop-out');
-});	
-var headerHeight=$('.header-wrapper').innerHeight(); 
-$('.master-container').css('padding-top', headerHeight);
-	
-/*------------------------------------
-		4. COLLAPSE LEFT PANEL
-------------------------------------*/
-$('.sidebar-toggle-btn').click(function(){
-	$('body').toggleClass('toggle-sidebar');
-});
+    /*------------------------------------
+    		1. TOOLTIP
+    ------------------------------------*/
+    $('[data-toggle="tooltip"]').tooltip();
 
-/*------------------------------------
-		5. COLLAPSE LEFT PANEL
-------------------------------------*/	
-$('#AddProject').modal({backdrop: 'static', keyboard: false});
+    /*------------------------------------
+    		2. POPOVER
+    ------------------------------------*/
+    $('[data-toggle="popover"]').popover();
 
+    /*------------------------------------
+    		3. FILTER EXPAND
+    ------------------------------------*/
+    $('.view-more a').click(function () {
+        $('.filter-section').removeClass('pop-out');
+        $(this).closest('.filter-section').toggleClass('pop-out animated fadeIn');
+    });
+
+    $('.filter-back a').click(function () {
+        $('.filter-section').removeClass('pop-out');
+    });
+    var headerHeight = $('.header-wrapper').innerHeight();
+    $('.master-container').css('padding-top', headerHeight);
+
+    /*------------------------------------
+    		4. COLLAPSE LEFT PANEL
+    ------------------------------------*/
+    $('.sidebar-toggle-btn').click(function () {
+        $('body').toggleClass('toggle-sidebar');
+    });
+
+    /*------------------------------------
+    		5. COLLAPSE LEFT PANEL
+    ------------------------------------*/
+    $('#AddProject').modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+
+    /*------------------------------------
+    		5. slimScroll
+    ------------------------------------*/
+    //General slimScroll add slimScroll class to wrapper div, Outside div should have height property and value
+    $('.slimScroll').slimScroll({
+        height: '100%',
+        disableFadeOut: true,
+        railVisible: true,
+        alwaysVisible: true,
+        wheelStep: 5,
+        allowPageScroll: true,
+    });
+    //to enable scroll inside forecast timeline. it contain max-height value in css file
+    $('.slimScroll-timeline').slimScroll({
+        height: '300px',
+        disableFadeOut: true,
+        railVisible: true,
+        alwaysVisible: true,
+        wheelStep: 5,
+        allowPageScroll: true,
+    });
     
-/*------------------------------------
-		5. slimScroll
-------------------------------------*/
-$('.slimScroll-timeline').slimScroll({
-    height: '300px',
-    disableFadeOut: true,
-    railVisible: true,
-    alwaysVisible: true,
-    wheelStep: 5,
-    allowPageScroll: true,
-});
+    
+    /*---------------------------------------
+            6. Main filter(top) dropdown 
+    ----------------------------------------*/
+    $('.dropdown-menu-filter').on({
+        "click": function (e) {
+            e.stopPropagation();
+        }
+    });
+    
+    
+    /*---------------------------------------
+            7. Forecast timeline: on button click adding open class to first level accordion
+    ----------------------------------------*/
+    $('.level-1-btn').on('click', function () {
+        $(this).closest('.timeline.panel').toggleClass('open');
+        $(this).closest('.timeline.panel').siblings().removeClass('open');
+    });
+    
+    
+    /*---------------------------------------
+            8. Forecast timeline: timeline item - onclick edit option
+    ----------------------------------------*/
+    $('.item-edit').siblings('.item-count').click(function () {
+        $(this).hide();
+        $(this).siblings('.item-edit').show();
+        $(this).siblings('.item-edit').children('input').focus();
+        var itemValue = $(this).text();
+        itemValue = parseInt(itemValue);
+        $(this).siblings('.item-edit').children('input').val(itemValue);
+    });
+    
+    
+    /*---------------------------------------
+            9. Forecast timeline: timeline item - after edit value input blur function for update value
+    ----------------------------------------*/
+    $('.item-edit').children('input').blur(function () {
+        $(this).parent('.item-edit').hide();
+        $(this).parent('.item-edit').siblings('.item-count').show();
+        var itemValue = $(this).val();
+        itemValue = parseInt(itemValue);
+        $(this).parent('.item-edit').siblings('.item-count').text(itemValue);
+    });
 
-/*******************************************************************************
-****************************Document Ready Closed******************************/ 
+    /*******************************************************************************
+     ****************************Document Ready Closed******************************/
 });

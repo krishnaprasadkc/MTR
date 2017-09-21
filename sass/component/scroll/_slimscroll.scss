@@ -1,11 +1,13 @@
 /*----------------------------------------
 Slimscroll
 ----------------------------------------*/
-.slimScrollDiv{
-    height: auto !important;
-    max-height: 55vh !important;
-    .slimScroll-timeline{
+.timeline-level-1 {
+    .slimScrollDiv {
         height: auto !important;
         max-height: 55vh !important;
+        .slimScroll-timeline {
+            height: auto !important;
+            max-height: 55vh !important;
+        }
     }
 }
