@@ -1739,13 +1739,7 @@
             }
         });
         //---------------------------------------
-        //tooltip
-        //---------------------------------------
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-        //---------------------------------------
-        //Accordion open event
+        //On button click ading open class to first level accordion
         //---------------------------------------
         $('.level-1-btn').on('click', function() {
             $(this).closest('.timeline.panel').toggleClass('open');
@@ -1762,7 +1756,9 @@
             itemValue = parseInt(itemValue);
             $(this).siblings('.item-edit').children('input').val(itemValue);
         });
-        //input blur function
+        //---------------------------------------
+        //timeline item input blur function
+        //---------------------------------------
         $('.item-edit').children('input').blur(function() {
             $(this).parent('.item-edit').hide();
             $(this).parent('.item-edit').siblings('.item-count').show();
