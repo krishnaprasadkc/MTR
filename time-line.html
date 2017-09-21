@@ -503,20 +503,36 @@
                                                                                         <div class="item-count">
                                                                                             10
                                                                                         </div>
-                                                                                    </div>
-                                                                                    <div class="column">
-                                                                                        <div class="item-count">
-                                                                                            10
+                                                                                        <div class="item-edit">
+                                                                                            <input type="number" class="form-control">
+                                                                                            <i class="fa fa-check" aria-hidden="true"></i>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="column">
                                                                                         <div class="item-count">
                                                                                             10
+                                                                                        </div>
+                                                                                        <div class="item-edit">
+                                                                                            <input type="number" class="form-control">
+                                                                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="column">
+                                                                                        <div class="item-count">
+                                                                                            10
+                                                                                        </div>
+                                                                                        <div class="item-edit">
+                                                                                            <input type="number" class="form-control">
+                                                                                            <i class="fa fa-check" aria-hidden="true"></i>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="column">
                                                                                         <div class="item-count">
                                                                                             1000
+                                                                                        </div>
+                                                                                        <div class="item-edit">
+                                                                                            <input type="number" class="form-control">
+                                                                                            <i class="fa fa-check" aria-hidden="true"></i>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -589,6 +605,9 @@
                                                                                     <label>Astro Device</label>
                                                                                     <label>5016</label>
                                                                                     <label class="status-default">Status</label>
+                                                                                </div>
+                                                                                <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                    <i class="fa fa-exclamation" aria-hidden="true"></i>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -686,6 +705,9 @@
                                                                                     <label>5016</label>
                                                                                     <label class="status-default">Status</label>
                                                                                 </div>
+                                                                                <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                    <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-xs-4">
@@ -781,6 +803,9 @@
                                                                                     <label>Astro Device</label>
                                                                                     <label>5016</label>
                                                                                     <label class="status-default">Status</label>
+                                                                                </div>
+                                                                                <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                    <i class="fa fa-exclamation" aria-hidden="true"></i>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1704,6 +1729,25 @@
             $(this).closest('.timeline.panel').toggleClass('open');
             $(this).closest('.timeline.panel').siblings().removeClass('open');
         });
+        //---------------------------------------
+        //timeline item onclick edit option
+        //---------------------------------------
+        $('.item-edit').siblings('.item-count').click(function(){
+            $(this).hide();
+            $(this).siblings('.item-edit').show();
+            $(this).siblings('.item-edit').children('input').focus();
+            var itemValue = $(this).text();
+            itemValue = parseInt(itemValue);
+            $(this).siblings('.item-edit').children('input').val(itemValue);
+        });
+        //input blur function
+        $('.item-edit').children('input').blur(function(){
+            $(this).parent('.item-edit').hide();
+            $(this).parent('.item-edit').siblings('.item-count').show();
+            
+        });
+        
+        
     </script>
 </body>
 

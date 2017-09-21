@@ -118,6 +118,30 @@ Timeline
         padding: 0 $padding-default /1.5;
         color: $color-primary;
     }
+    .item-edit{
+        display: none;
+        position: relative;
+        width: 70%;
+        margin: auto;
+        input{
+            border: 0;
+            border-bottom: 1px solid $color-brand;
+            box-shadow: none;
+            @include border-radius(0);
+            padding-left: $padding-default;
+            padding-right: $padding-default;
+            text-align: center;
+        }
+        .fa,i{
+            position: absolute;
+            right: 0px;
+            height: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: $color-brand;
+        }
+    }
     .timeline-level-1 {
         >.timeline {
             background: $color-secondary;
