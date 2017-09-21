@@ -1,6 +1,4 @@
-<!-- HEADER STARTS -->
-
-<header class="row header-wrapper">
+<header class="header-wrapper navbar-fixed-top">
 
 	<!-- Brand Logo-->
 	<div class="col-xs-2 brand-logo">
@@ -20,18 +18,30 @@
 	</div>
 
 	<!-- Menu & Search-->
-	<div class="col-xs-5 nav-search-wrapper">
+	<div class="col-xs-7 nav-search-wrapper">
 
 		<nav class="clearfix text-right">
 
-			<div class="nav-items collapse navbar-collapse animated bounceInRight" id="top-nav">
+			<!-- User Profile-->
+			<div class="user-profile pull-right">
+				<img src="image/boy.png" class="img-circle user-avatar" alt="Cinque Terre" width="50" height="50">
+				<div class="user-wrapper">
+					<div class="user-name ellipsis">Bradly Bivens</div>
+					<small class="user-designation ellipsis">Regional Head</small>
+				</div>
+				<a href="#" class="pull-right logout">
+					<i class="fa fa-2x fa-power-off fa-rotate-90" aria-hidden="true"></i>
+				</a>
+			</div>
+
+			<div class="nav-items collapse navbar-collapse animated bounceInDown" id="top-nav">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">NAV MENU ONE</a></li>
 					<li><a href="#">NAV MENU TWO</a></li>
 					<li><a href="#">NAV MENU THREE</a></li>
 				</ul>
 			</div>
-			<div class="search-input collapse navbar-collapse animated bounceInRight" id="search">
+			<div class="search-input collapse navbar-collapse animated bounceInDown" id="search">
 				<input type="text" placeholder="Quick Search" class="form-control">
 			</div>
 
@@ -41,25 +51,9 @@
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
 				<i class="fa fa-bars" aria-hidden="true"></i>
 			</button>
+
 		</nav>
 
-
-
-
 	</div>
-
-	<!-- User Profile-->
-	<div class="col-xs-2 user-profile">
-		<img src="image/boy.png" class="img-circle user-avatar" alt="Cinque Terre" width="50" height="50">
-		<div class="user-wrapper">
-			<div class="user-name ellipsis">Bradly Bivens</div>
-			<small class="user-designation ellipsis">Regional Head</small>
-		</div>
-		<a href="#" class="pull-right logout">
-			<i class="fa fa-2x fa-power-off fa-rotate-90" aria-hidden="true"></i>
-		</a>
-	</div>
-
+	
 </header>
-
-<!-- HEADER ENDS -->
