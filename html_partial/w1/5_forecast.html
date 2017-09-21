@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head1" runat="server">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>Motorola:: Channel</title>
+	<link href="../../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="master-container">
+
+		<!-- HEADER STARTS -->
+
+		<header class="header-wrapper navbar-fixed-top">
+
+			<!-- Brand Logo-->
+			<div class="col-xs-2 brand-logo">
+				<a href="#"><img src="../../image/logo.png" class="img-responsive" /></a>
+			</div>
+
+			<!-- Filter Switch-->
+			<div class="col-xs-3">
+				<div class="btn-group filter-switch">
+					<button type="button" class="btn">
+						<i class="fa fa-align-left" aria-hidden="true"></i> Quarterly
+					</button>
+					<button type="button" class="btn active">
+						<i class="fa fa-windows" aria-hidden="true"></i> Monthly
+					</button>
+				</div>
+				<div class="form-inline unit-switch padding-left-1x">
+					<select class="form-control">
+						<option>Unit</option>
+						<option selected>Amount</option>
+					</select>
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</div>
+			</div>
+			
+
+			<!-- Menu & Search-->
+			<div class="col-xs-7 nav-search-wrapper">
+
+				<nav class="clearfix text-right">
+					
+					<!-- User Profile-->
+					<div class="user-profile pull-right">
+						<img src="../../image/boy.png" class="img-circle user-avatar" alt="Cinque Terre" width="50" height="50">
+						<div class="user-wrapper">
+							<div class="user-name ellipsis">Bradly Bivens</div>
+							<small class="user-designation ellipsis">Regional Head</small>
+						</div>
+						<a href="#" class="pull-right logout">
+							<i class="fa fa-2x fa-power-off fa-rotate-90" aria-hidden="true"></i>
+						</a>
+					</div>
+					
+					<div class="nav-items collapse navbar-collapse animated bounceInDown" id="top-nav">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">NAV MENU ONE</a></li>
+							<li><a href="#">NAV MENU TWO</a></li>
+							<li><a href="#">NAV MENU THREE</a></li>
+						</ul>
+					</div>
+					<div class="search-input collapse navbar-collapse animated bounceInDown" id="search">
+						<input type="text" placeholder="Quick Search" class="form-control">
+					</div>
+
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					
+				</nav>
+				
+			</div>
+		</header>
+
+		<!-- HEADER ENDS -->
+
+		<!-- FORECAST PAGE STARTS -->
+		
+		<div class="row no-gutter">
+
+			<!--********************************************
+							FILTER LEFT SIDEBAR STARTS
+			********************************************--->
+			<div class="col-xs-2 sidebar-wrapper">
+				<div class="filter-sidebar clearfix">
+					
+					<!-- Sample Filter Set 1 --->
+					<section class="filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 2 --->
+					<section class="filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 3 with EXPAND view --->
+					<section class="filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Filter + View More click</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Sample Filter Set 4 --->
+					<section class="filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+
+					</section>
+
+					<!-- Sample Filter Set 5 --->
+					<section class="filter-section">
+						<hr class="hr"/>
+						<label class="filter-label">Default Filter Set</label>
+						<div class="condition-wrapper clearfix">
+							<nav class="filter-back">
+								<a href="#">
+									<i class="fa fa-2x fa-arrow-left"></i>
+									<span>Back</span>
+								</a>
+							</nav>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips">
+								<span class="chips-text">Asia Emerging Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="chips disabled">
+								<span class="chips-text">Asia</span>
+								<a href="#"><i class="fa fa-close chips-icon"></i></a>
+							</div>
+							<div class="view-more">
+								<a href="#">View More</a>
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+				
+				<!-- SIDEBAR EXPAND/COLLAPSE BUTTON STARTS -->
+					<div class="sidebar-toggle">
+						<a href="#" class="sidebar-toggle-btn">
+							<i class="fa fa-reply" aria-hidden="true"></i>
+						</a>
+					</div>
+				<!-- SIDEBAR EXPAND/COLLAPSE BUTTON STARTS -->
+				
+			</div>
+			<!--**********************************************
+							FILTER LEFT SIDEBAR ENDS
+			**********************************************--->
+			
+			<!--********************************************
+							TIMELINE PAGE STARTS
+			********************************************--->
+
+			<div class="col-xs-10 col-xs-offset-2 main-content">
+				<!--main filter-->
+                <div class="row no-gutter main-filter">
+                    <div class="col-xs-3">
+                        <div class="dropdown-filter dropdown">
+                            <div class="row no-gutter" data-toggle="dropdown">
+                                <div class="name col-xs-4" title="SUB REGION">SUB REGION</div>
+                                <div class="selector col-xs-8">All</div>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="dropdown-menu-filter col-xs-8">
+                                <div class="search-filter">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <div class="list-filter">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox1" class="checkbox__input" checked>
+                                        <label for="checkbox1" class="checkbox__label" title="Checkbox 1">Checkbox 1</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox2" class="checkbox__input">
+                                        <label for="checkbox2" class="checkbox__label" title="Checkbox 2">Checkbox 2</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox3" class="checkbox__input">
+                                        <label for="checkbox3" class="checkbox__label" title="Checkbox 3">Checkbox 3</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="dropdown-filter dropdown">
+                            <div class="row no-gutter" data-toggle="dropdown">
+                                <div class="name col-xs-4" title="COUNTRY">COUNTRY</div>
+                                <div class="selector col-xs-8">India</div>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="dropdown-menu-filter col-xs-8">
+                                <div class="search-filter">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <div class="list-filter">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox4" class="checkbox__input" checked>
+                                        <label for="checkbox4" class="checkbox__label" title="Checkbox 1">Checkbox 1</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox5" class="checkbox__input">
+                                        <label for="checkbox5" class="checkbox__label" title="Checkbox 2">Checkbox 2</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox6" class="checkbox__input">
+                                        <label for="checkbox6" class="checkbox__label" title="Checkbox 3">Checkbox 3</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="dropdown-filter dropdown">
+                            <div class="row no-gutter" data-toggle="dropdown">
+                                <div class="name col-xs-4" title="SALESMAN">SALESMAN</div>
+                                <div class="selector col-xs-8">All</div>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="dropdown-menu-filter col-xs-8">
+                                <div class="search-filter">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <div class="list-filter">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox7" class="checkbox__input" checked>
+                                        <label for="checkbox7" class="checkbox__label" title="Checkbox 1">Checkbox 1</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox8" class="checkbox__input">
+                                        <label for="checkbox8" class="checkbox__label" title="Checkbox 2">Checkbox 2</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox9" class="checkbox__input">
+                                        <label for="checkbox9" class="checkbox__label" title="Checkbox 3">Checkbox 3</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="dropdown-filter dropdown">
+                            <div class="row no-gutter" data-toggle="dropdown">
+                                <div class="name col-xs-4" title="DISTRIBUTOR">DISTRIBUTOR</div>
+                                <div class="selector col-xs-8">All</div>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="dropdown-menu-filter col-xs-8">
+                                <div class="search-filter">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <div class="list-filter">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox10" class="checkbox__input" checked>
+                                        <label for="checkbox10" class="checkbox__label" title="Checkbox 1">Checkbox 1</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox11" class="checkbox__input">
+                                        <label for="checkbox11" class="checkbox__label" title="Checkbox 2">Checkbox 2</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox12" class="checkbox__input">
+                                        <label for="checkbox12" class="checkbox__label" title="Checkbox 3">Checkbox 3</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/main filter-->
+                <!--time line head-->
+                <div class="timeline-head container-fluid">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="timeline-controls">
+                                <button class="btn btn-circle btn-primary" data-toggle="tooltip" data-placement="bottom" title="Create New Order"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                <button class="btn btn-circle btn-primary" data-toggle="tooltip" data-placement="bottom" title="Reset Timeline"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+                                <div class="search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Search here" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <h2 class="heading-default">
+                                <i class="fa fa-tasks" aria-hidden="true"></i> ORDERS
+                            </h2>
+                            <div class="calendar-timeline">
+                                <div class="head">
+                                    <button class="left btn btn-secondary"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <label>SEP'17</label>
+                                    <button class="right btn btn-secondary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="body row no-gutter">
+                                    <div class="column">
+                                        Week1
+                                    </div>
+                                    <div class="column">
+                                        Week2
+                                    </div>
+                                    <div class="column">
+                                        Week3
+                                    </div>
+                                    <div class="column">
+                                        Week4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <h2 class="heading-default">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i> SALES
+                            </h2>
+                            <div class="calendar-timeline">
+                                <div class="head">
+                                    <button class="left btn btn-secondary"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                    <label>SEP'17</label>
+                                    <button class="right btn btn-secondary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="body row no-gutter">
+                                    <div class="column">
+                                        Week1
+                                    </div>
+                                    <div class="column">
+                                        Week2
+                                    </div>
+                                    <div class="column">
+                                        Week3
+                                    </div>
+                                    <div class="column">
+                                        Week4
+                                    </div>
+                                    <div class="column">
+                                        Week5
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/time line head-->
+                <!--timeline wrapper-->
+                <div class="timeline-wrapper">
+                    <!--level-1 panel-group start-->
+                    <div class="accordion timeline-level-1" role="tablist" aria-multiselectable="true" id="timeline-level-1">
+                        <!--level-1 timeline item-->
+                        <div class="timeline panel">
+                            <!--level-1 head-collapse-->
+                            <div class="head">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="timeline-column-1">
+                                            <div class="name-wrapper">
+                                                <h2 class="heading-default">Asia Emerging</h2>
+                                                <div class="value">$1,500</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-2">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        1000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-3">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div class="timeline-column timeline-column-4">
+                                            <button class="btn btn-primary collapsed level-1-btn" data-toggle="collapse" data-parent="#timeline-level-1" data-target="#collapse-level-1-1">
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/level-1 head-collapse-->
+                            <!--level-1 panel-collapse-->
+                            <div class="panel-collapse-1 collapse" id="collapse-level-1-1">
+                                <div class="slimScroll">
+                                    <!--level-2 panel-group start-->
+                                    <div class="accordion timeline-level-2" role="tablist" aria-multiselectable="true" id="timeline-level-2">
+                                        <!--level-2 timeline item-->
+                                        <div class="timeline panel">
+                                            <!--level-2 head-collapse-->
+                                            <div class="head">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <div class="timeline-column-1">
+                                                            <div class="name-wrapper">
+                                                                <h2 class="heading-default">Asia Emerging</h2>
+                                                                <div class="value">$1,500</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-2">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        1000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-3">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <div class="timeline-column timeline-column-4">
+                                                            <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-2" data-target="#collapse-level-2-1">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/level-2 head-collapse-->
+                                            <!--level-2 panel-collapse-->
+                                            <div class="panel-collapse-1 collapse" id="collapse-level-2-1">
+
+                                                <!--level-3 panel-group start-->
+                                                <div class="accordion timeline-level-3" role="tablist" aria-multiselectable="true" id="timeline-level-3">
+                                                    <!--level-2 timeline item-->
+                                                    <div class="timeline panel">
+                                                        <!--level-2 head-collapse-->
+                                                        <div class="head">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <div class="timeline-column-1">
+                                                                        <div class="name-wrapper">
+                                                                            <h2 class="heading-default">Asia Emerging</h2>
+                                                                            <div class="value">$1,500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-2">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    1000
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-3">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-1">
+                                                                    <div class="timeline-column timeline-column-4">
+                                                                        <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-3" data-target="#collapse-level-3-1">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/level-3 head-collapse-->
+                                                        <!--level-3 panel-collapse-->
+                                                        <div class="panel-collapse-1 collapse" id="collapse-level-3-1">
+
+                                                            <!--level-4 panel-group start-->
+                                                            <div class="accordion timeline-level-4" role="tablist" aria-multiselectable="true" id="timeline-level-4">
+                                                                <!--level-4 timeline item-->
+                                                                <div class="timeline panel">
+                                                                    <!--level-4 head-collapse-->
+                                                                    <div class="head">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="timeline-column-1">
+                                                                                    <div class="name-wrapper">
+                                                                                        <h2 class="heading-default">Asia Emerging</h2>
+                                                                                        <div class="value">$1,500</div>
+                                                                                    </div>
+                                                                                    <div class="status-wrapper">
+                                                                                        <label>Astro Device</label>
+                                                                                        <label>5016</label>
+                                                                                        <label class="status-default">Status</label>
+                                                                                    </div>
+                                                                                    <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-2">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                750
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1650
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                988
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1000
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-3">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                750
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1650
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                988
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1000
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1655
+                                                                                            </div>
+                                                                                            <div class="item-edit">
+                                                                                                <input type="number" class="form-control">
+                                                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-1">
+                                                                                <div class="timeline-column timeline-column-4">
+                                                                                    <div class="dropdown">
+                                                                                        <button class="btn btn-primary collapsed dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                    </button>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                                                                            <li><a href="#">Action</a></li>
+                                                                                            <li><a href="#">Another action</a></li>
+                                                                                            <li><a href="#">Something else here</a></li>
+                                                                                            <li role="separator" class="divider"></li>
+                                                                                            <li><a href="#">Separated link</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/level-2 head-collapse-->
+                                                                </div>
+                                                                <!--/level-2 timeline item-->
+                                                                <!--level-2 timeline item-->
+                                                                <div class="timeline panel">
+                                                                    <!--level-2 head-collapse-->
+                                                                    <div class="head">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="timeline-column-1">
+                                                                                    <div class="name-wrapper">
+                                                                                        <h2 class="heading-default">Asia Emerging</h2>
+                                                                                        <div class="value">$1,500</div>
+                                                                                    </div>
+                                                                                    <div class="status-wrapper">
+                                                                                        <label>Astro Device</label>
+                                                                                        <label>5016</label>
+                                                                                        <label class="status-default">Status</label>
+                                                                                    </div>
+                                                                                    <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-2">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1000
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-3">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-1">
+                                                                                <div class="timeline-column timeline-column-4">
+                                                                                    <div class="dropdown">
+                                                                                        <button class="btn btn-primary collapsed dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                    </button>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                                                                            <li><a href="#">Action</a></li>
+                                                                                            <li><a href="#">Another action</a></li>
+                                                                                            <li><a href="#">Something else here</a></li>
+                                                                                            <li role="separator" class="divider"></li>
+                                                                                            <li><a href="#">Separated link</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/level-2 head-collapse-->
+                                                                </div>
+                                                                <!--/level-2 timeline item-->
+                                                                <!--level-2 timeline item-->
+                                                                <div class="timeline panel">
+                                                                    <!--level-2 head-collapse-->
+                                                                    <div class="head">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="timeline-column-1">
+                                                                                    <div class="name-wrapper">
+                                                                                        <h2 class="heading-default">Asia Emerging</h2>
+                                                                                        <div class="value">$1,500</div>
+                                                                                    </div>
+                                                                                    <div class="status-wrapper">
+                                                                                        <label>Astro Device</label>
+                                                                                        <label>5016</label>
+                                                                                        <label class="status-default">Status</label>
+                                                                                    </div>
+                                                                                    <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-2">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1000
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-3">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-1">
+                                                                                <div class="timeline-column timeline-column-4">
+                                                                                    <div class="dropdown">
+                                                                                        <button class="btn btn-primary collapsed dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                    </button>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu3">
+                                                                                            <li><a href="#">Action</a></li>
+                                                                                            <li><a href="#">Another action</a></li>
+                                                                                            <li><a href="#">Something else here</a></li>
+                                                                                            <li role="separator" class="divider"></li>
+                                                                                            <li><a href="#">Separated link</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/level-2 head-collapse-->
+                                                                </div>
+                                                                <!--/level-2 timeline item-->
+                                                                <!--level-2 timeline item-->
+                                                                <div class="timeline panel">
+                                                                    <!--level-2 head-collapse-->
+                                                                    <div class="head">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="timeline-column-1">
+                                                                                    <div class="name-wrapper">
+                                                                                        <h2 class="heading-default">Asia Emerging</h2>
+                                                                                        <div class="value">$1,500</div>
+                                                                                    </div>
+                                                                                    <div class="status-wrapper">
+                                                                                        <label>Astro Device</label>
+                                                                                        <label>5016</label>
+                                                                                        <label class="status-default">Status</label>
+                                                                                    </div>
+                                                                                    <div data-toggle="popover" data-placement="right" data-content="Some content inside the popover" class="info-popover" data-original-title="Popover Header">
+                                                                                        <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-2">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                1000
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                                <div class="calendar-timeline timeline-column-3">
+                                                                                    <div class="body row no-gutter">
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="column">
+                                                                                            <div class="item-count">
+                                                                                                10
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-1">
+                                                                                <div class="timeline-column timeline-column-4">
+                                                                                    <div class="dropdown">
+                                                                                        <button class="btn btn-primary collapsed dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                                                    </button>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu4">
+                                                                                            <li><a href="#">Action</a></li>
+                                                                                            <li><a href="#">Another action</a></li>
+                                                                                            <li><a href="#">Something else here</a></li>
+                                                                                            <li role="separator" class="divider"></li>
+                                                                                            <li><a href="#">Separated link</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/level-2 head-collapse-->
+                                                                </div>
+                                                                <!--/level-2 timeline item-->
+                                                            </div>
+                                                            <!--/level-3 panel-group-->
+
+                                                        </div>
+                                                        <!--/level-2 panel-collapse-->
+                                                    </div>
+                                                    <!--/level-2 timeline item-->
+                                                    <!--level-2 timeline item-->
+                                                    <div class="timeline panel">
+                                                        <!--level-2 head-collapse-->
+                                                        <div class="head">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <div class="timeline-column-1">
+                                                                        <div class="name-wrapper">
+                                                                            <h2 class="heading-default">Asia Emerging</h2>
+                                                                            <div class="value">$1,500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-2">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    1000
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-3">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-1">
+                                                                    <div class="timeline-column timeline-column-4">
+                                                                        <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-3" data-target="#collapse-level-3-2">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/level-2 head-collapse-->
+                                                        <!--level-2 panel-collapse-->
+                                                        <div class="panel-collapse-1 collapse" id="collapse-level-3-2">
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                        </div>
+                                                        <!--/level-2 panel-collapse-->
+                                                    </div>
+                                                    <!--/level-2 timeline item-->
+                                                    <!--level-2 timeline item-->
+                                                    <div class="timeline panel">
+                                                        <!--level-2 head-collapse-->
+                                                        <div class="head">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <div class="timeline-column-1">
+                                                                        <div class="name-wrapper">
+                                                                            <h2 class="heading-default">Asia Emerging</h2>
+                                                                            <div class="value">$1,500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-2">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    1000
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-3">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-1">
+                                                                    <div class="timeline-column timeline-column-4">
+                                                                        <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-3" data-target="#collapse-level-3-3">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/level-2 head-collapse-->
+                                                        <!--level-2 panel-collapse-->
+                                                        <div class="panel-collapse-1 collapse" id="collapse-level-3-3">
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                        </div>
+                                                        <!--/level-2 panel-collapse-->
+                                                    </div>
+                                                    <!--/level-2 timeline item-->
+                                                    <!--level-2 timeline item-->
+                                                    <div class="timeline panel">
+                                                        <!--level-2 head-collapse-->
+                                                        <div class="head">
+                                                            <div class="row">
+                                                                <div class="col-xs-3">
+                                                                    <div class="timeline-column-1">
+                                                                        <div class="name-wrapper">
+                                                                            <h2 class="heading-default">Asia Emerging</h2>
+                                                                            <div class="value">$1,500</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-2">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    1000
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    <div class="calendar-timeline timeline-column-3">
+                                                                        <div class="body row no-gutter">
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column">
+                                                                                <div class="item-count">
+                                                                                    10
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-1">
+                                                                    <div class="timeline-column timeline-column-4">
+                                                                        <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-3" data-target="#collapse-level-3-4">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/level-2 head-collapse-->
+                                                        <!--level-2 panel-collapse-->
+                                                        <div class="panel-collapse-1 collapse" id="collapse-level-3-4">
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                        </div>
+                                                        <!--/level-2 panel-collapse-->
+                                                    </div>
+                                                    <!--/level-2 timeline item-->
+                                                </div>
+                                                <!--/level-3 panel-group-->
+
+                                            </div>
+                                            <!--/level-2 panel-collapse-->
+                                        </div>
+                                        <!--/level-2 timeline item-->
+                                        <!--level-2 timeline item-->
+                                        <div class="timeline panel">
+                                            <!--level-2 head-collapse-->
+                                            <div class="head">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <div class="timeline-column-1">
+                                                            <div class="name-wrapper">
+                                                                <h2 class="heading-default">Asia Emerging</h2>
+                                                                <div class="value">$1,500</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-2">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        1000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-3">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <div class="timeline-column timeline-column-4">
+                                                            <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-2" data-target="#collapse-level-2-2">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/level-2 head-collapse-->
+                                            <!--level-2 panel-collapse-->
+                                            <div class="panel-collapse-1 collapse" id="collapse-level-2-2">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </div>
+                                            <!--/level-2 panel-collapse-->
+                                        </div>
+                                        <!--/level-2 timeline item-->
+                                        <!--level-2 timeline item-->
+                                        <div class="timeline panel">
+                                            <!--level-2 head-collapse-->
+                                            <div class="head">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <div class="timeline-column-1">
+                                                            <div class="name-wrapper">
+                                                                <h2 class="heading-default">Asia Emerging</h2>
+                                                                <div class="value">$1,500</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-2">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        1000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-3">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <div class="timeline-column timeline-column-4">
+                                                            <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-2" data-target="#collapse-level-2-3">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/level-2 head-collapse-->
+                                            <!--level-2 panel-collapse-->
+                                            <div class="panel-collapse-1 collapse" id="collapse-level-2-3">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </div>
+                                            <!--/level-2 panel-collapse-->
+                                        </div>
+                                        <!--/level-2 timeline item-->
+                                        <!--level-2 timeline item-->
+                                        <div class="timeline panel">
+                                            <!--level-2 head-collapse-->
+                                            <div class="head">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <div class="timeline-column-1">
+                                                            <div class="name-wrapper">
+                                                                <h2 class="heading-default">Asia Emerging</h2>
+                                                                <div class="value">$1,500</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-2">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        1000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="calendar-timeline timeline-column-3">
+                                                            <div class="body row no-gutter">
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                                <div class="column">
+                                                                    <div class="item-count">
+                                                                        10
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-1">
+                                                        <div class="timeline-column timeline-column-4">
+                                                            <button class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#timeline-level-2" data-target="#collapse-level-2-4">
+                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/level-2 head-collapse-->
+                                            <!--level-2 panel-collapse-->
+                                            <div class="panel-collapse-1 collapse" id="collapse-level-2-4">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            </div>
+                                            <!--/level-2 panel-collapse-->
+                                        </div>
+                                        <!--/level-2 timeline item-->
+                                    </div>
+                                    <!--/level-2 panel-group-->
+                                </div>
+
+                            </div>
+                            <!--/level-1-1 panel-collapse-->
+                        </div>
+                        <!--/level-1 timeline item-->
+                        <!--level-1 timeline item-->
+                        <div class="timeline panel">
+                            <div class="head">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="timeline-column-1">
+                                            <div class="name-wrapper">
+                                                <h2 class="heading-default">Asia Developed</h2>
+                                                <div class="value">$1,500</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-2">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        1000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-3">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div class="timeline-column timeline-column-4">
+                                            <button class="btn btn-primary collapsed level-1-btn" data-toggle="collapse" data-parent="#timeline-level-1" data-target="#collapse-level-1-2">
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--level-2 panel-collapse-->
+                            <div class="panel-collapse-1 collapse" id="collapse-level-1-2">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                            <!--/level-2 panel-collapse-->
+                        </div>
+                        <!--/level-1 timeline item-->
+                        <!--level-1 timeline item-->
+                        <div class="timeline panel">
+                            <div class="head">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="timeline-column-1">
+                                            <div class="name-wrapper">
+                                                <h2 class="heading-default">ANZ</h2>
+                                                <div class="value">$1,500</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-2">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        1000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-3">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div class="timeline-column timeline-column-4">
+                                            <button class="btn btn-primary collapsed level-1-btn" data-toggle="collapse" data-parent="#timeline-level-1" data-target="#collapse-level-1-3">
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--level-1 panel-collapse-->
+                            <div class="panel-collapse-1 collapse" id="collapse-level-1-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                            <!--/level-1 panel-collapse-->
+                        </div>
+                        <!--/level-1 timeline item-->
+                        <!--level-1 timeline item-->
+                        <div class="timeline panel">
+                            <div class="head">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="timeline-column-1">
+                                            <div class="name-wrapper">
+                                                <h2 class="heading-default">China</h2>
+                                                <div class="value">$1,500</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-2">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        1000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="calendar-timeline timeline-column-3">
+                                            <div class="body row no-gutter">
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                                <div class="column">
+                                                    <div class="item-count">
+                                                        10
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div class="timeline-column timeline-column-4">
+                                            <button class="btn btn-primary collapsed level-1-btn" data-toggle="collapse" data-parent="#timeline-level-1" data-target="#collapse-level-1-4">
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--level-1 panel-collapse-->
+                            <div class="panel-collapse-1 collapse" id="collapse-level-1-4">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                            <!--/level-1 panel-collapse-->
+                        </div>
+                        <!--/level-1 timeline item-->
+                    </div>
+                    <!--/level-1 panel-group-->
+                </div>
+                <!--/timeline wrapper-->
+			</div>
+
+		</div>
+		
+		<!--********************************************
+							TIMELINE PAGE ENDS
+		********************************************--->
+
+
+
+	</div>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../js/jquery.slimscroll.min.js"></script>
+    <script src="../../js/master.js"></script>
+    <script>
+        //---------------------------------------
+        //for dropdown checkbox
+        //---------------------------------------
+        $('.dropdown-menu-filter').on({
+            "click": function(e) {
+                e.stopPropagation();
+            }
+        });
+        //---------------------------------------
+        //On button click ading open class to first level accordion
+        //---------------------------------------
+        $('.level-1-btn').on('click', function() {
+            $(this).closest('.timeline.panel').toggleClass('open');
+            $(this).closest('.timeline.panel').siblings().removeClass('open');
+        });
+        //---------------------------------------
+        //timeline item onclick edit option
+        //---------------------------------------
+        $('.item-edit').siblings('.item-count').click(function() {
+            $(this).hide();
+            $(this).siblings('.item-edit').show();
+            $(this).siblings('.item-edit').children('input').focus();
+            var itemValue = $(this).text();
+            itemValue = parseInt(itemValue);
+            $(this).siblings('.item-edit').children('input').val(itemValue);
+        });
+        //---------------------------------------
+        //timeline item input blur function
+        //---------------------------------------
+        $('.item-edit').children('input').blur(function() {
+            $(this).parent('.item-edit').hide();
+            $(this).parent('.item-edit').siblings('.item-count').show();
+            var itemValue = $(this).val();
+            itemValue = parseInt(itemValue);
+            $(this).parent('.item-edit').siblings('.item-count').text(itemValue);
+        });
+    </script>
+</body>
+
+</html>

@@ -378,7 +378,7 @@ $('.filter-back a').click(function(){
 	$('.filter-section').removeClass('pop-out');
 });	
 var headerHeight=$('.header-wrapper').innerHeight(); 
-$('.container-fluid').css('padding-top', headerHeight);
+$('.master-container').css('padding-top', headerHeight);
 	
 /*------------------------------------
 		4. COLLAPSE LEFT PANEL

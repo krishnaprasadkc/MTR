@@ -28,6 +28,9 @@ Timeline header
                 height: auto;
                 padding-left: 45px;
                 border-color: $color-grey-border;
+					&:focus{
+						border-color:$color-brand;
+					}
             }
             .fa-search{
                 position: absolute;
