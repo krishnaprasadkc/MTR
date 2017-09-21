@@ -392,6 +392,9 @@ $('.sidebar-toggle-btn').click(function(){
 ------------------------------------*/
 $('.slimScroll').slimScroll({
     height: '300px',
+    disableFadeOut: true,
+    railVisible: true,
+    alwaysVisible: true,
 //    allowPageScroll: true,
 });
 /*******************************************************************************
