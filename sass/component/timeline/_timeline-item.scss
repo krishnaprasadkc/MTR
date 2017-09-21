@@ -8,6 +8,20 @@ Timeline
         border: 1px solid $color-grey-border;
         border-top: 0;
         padding: $padding-default *2 0;
+        .row{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;             
+        }
         .timeline-column-1 {
             text-align: left;
             margin-left: $padding-default;
