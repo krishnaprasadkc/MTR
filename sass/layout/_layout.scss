@@ -22,22 +22,6 @@ body {
 	height: 100%;
 	border-right: solid 1px $color-grey-medium;
 	/*Refer z-index*/
-	.sidebar-toggle {
-		background: $color-grey-light;
-		@include border-radius(50%);
-		@include box-shadow();
-		position: absolute;
-		top: 0;
-		right: -($padding-default);
-		bottom: 0;
-		width: 32px;
-		height: 32px;
-		margin: auto;
-		.sidebar-toggle-btn {
-			line-height: $line-height+1;
-			padding: ($padding-default)-5;
-		}
-	}
 }
 .main-content {
 	@extend .padding-1x;

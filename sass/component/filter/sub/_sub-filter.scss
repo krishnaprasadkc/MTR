@@ -32,9 +32,10 @@
 				display: none;
 			}
 			.chips{
-				margin-bottom: ($padding-default)-5;
+				margin-bottom: ($margin-default)-5;
 			}
 			.view-more{
+				margin-top: $margin-default;
 				a{
 					color: $color-grey-extradark;
 				}
