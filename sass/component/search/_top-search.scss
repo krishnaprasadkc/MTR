@@ -2,6 +2,7 @@
 	.navbar-collapse{
 		&.search-input{
 			padding-top:($padding-default)-5;
+			margin-right:$margin-default;
 			vertical-align: top;
 		}
 	}

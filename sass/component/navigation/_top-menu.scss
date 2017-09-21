@@ -2,9 +2,9 @@
 	.navbar-toggle{
 		display: inline-block;
 		@extend .margin-none;
+		margin-right: $margin-default;
+		margin-top: $margin-default;
 		@extend .padding-none;
-		@extend .padding-right-1x;
-		@extend .padding-top-1x;
 		.fa{
 			font-size: $font-default+7;
 		}
@@ -63,7 +63,6 @@
 
 .user-profile{
 	max-width: 220px;
-	margin-right: $margin-default;
 	.user-avatar{
 		vertical-align: top;
 	}
