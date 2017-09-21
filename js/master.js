@@ -396,7 +396,7 @@ $('#AddProject').modal({backdrop: 'static', keyboard: false});
 /*------------------------------------
 		5. slimScroll
 ------------------------------------*/
-$('.slimScroll').slimScroll({
+$('.slimScroll-timeline').slimScroll({
     height: '300px',
     disableFadeOut: true,
     railVisible: true,
