@@ -1,40 +1,45 @@
-body{
-	&.toggle-sidebar{
-		.main-content{
-			width: 100%;
-			margin-left: 0;
-		}
-		.sidebar-wrapper{
-			width: 0;
-			.filter-sidebar{
-				display: none;
-			}
-			.sidebar-toggle {
-				.sidebar-toggle-btn {
-					.fa-reply {
-						&:before{
-							content: '\f064';
-						}
-					}
-				}
-			}
-		}
-	}
-	.sidebar-toggle {
-		background: $color-grey-light;
-		@include border-radius(50%);
-		@include box-shadow();
-		position: absolute;
-		top: 0;
-		right: -($padding-default);
-		bottom: 0;
-		width: 32px;
-		height: 32px;
-		margin: auto;
-		.sidebar-toggle-btn {
-			text-decoration: none;
-			line-height: $line-height+1;
-			padding: ($padding-default)-5;
-		}
-	}
+.main-content {
+    @include transition();
+}
+
+.sidebar-wrapper {
+    @include transition();
+    left: 0%;
+}
+
+body {
+    &.toggle-sidebar {
+        .main-content {
+            width: 98%;
+            margin-left: 2%;
+        }
+        .sidebar-wrapper {
+            left: -14.666667%;
+            .filter-sidebar {
+                opacity: 0;
+            }
+            .sidebar-toggle {
+                @include rotate();
+            }
+        }
+    }
+    .sidebar-toggle {
+        background: $color-grey-light;
+        @include border-radius(50%);
+        @include box-shadow();
+        position: absolute;
+        top: 0;
+        right: -($padding-default);
+        bottom: 0;
+        width: 32px;
+        height: 32px;
+        margin: auto;
+        @include transition();
+        @include rotate(0);
+        .sidebar-toggle-btn {
+            text-decoration: none;
+            line-height: $line-height+1;
+            padding: ($padding-default)-5;
+        }
+    }
 }

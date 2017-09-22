@@ -1995,44 +1995,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../../js/jquery.slimscroll.min.js"></script>
     <script src="../../js/master.js"></script>
-    <script>
-        //---------------------------------------
-        //for dropdown checkbox
-        //---------------------------------------
-        $('.dropdown-menu-filter').on({
-            "click": function(e) {
-                e.stopPropagation();
-            }
-        });
-        //---------------------------------------
-        //On button click ading open class to first level accordion
-        //---------------------------------------
-        $('.level-1-btn').on('click', function() {
-            $(this).closest('.timeline.panel').toggleClass('open');
-            $(this).closest('.timeline.panel').siblings().removeClass('open');
-        });
-        //---------------------------------------
-        //timeline item onclick edit option
-        //---------------------------------------
-        $('.item-edit').siblings('.item-count').click(function() {
-            $(this).hide();
-            $(this).siblings('.item-edit').show();
-            $(this).siblings('.item-edit').children('input').focus();
-            var itemValue = $(this).text();
-            itemValue = parseInt(itemValue);
-            $(this).siblings('.item-edit').children('input').val(itemValue);
-        });
-        //---------------------------------------
-        //timeline item input blur function
-        //---------------------------------------
-        $('.item-edit').children('input').blur(function() {
-            $(this).parent('.item-edit').hide();
-            $(this).parent('.item-edit').siblings('.item-count').show();
-            var itemValue = $(this).val();
-            itemValue = parseInt(itemValue);
-            $(this).parent('.item-edit').siblings('.item-count').text(itemValue);
-        });
-    </script>
+    
 </body>
 
 </html>

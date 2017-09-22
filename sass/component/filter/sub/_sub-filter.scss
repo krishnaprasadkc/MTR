@@ -1,5 +1,7 @@
 .filter-sidebar{
 	padding-top: ($padding-default)-5;
+    opacity: 1;
+    @include transition();
 	@extend .padding-bottom-1x;
 	.filter-section{
 		padding-top: $padding-default+10;
