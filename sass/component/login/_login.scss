@@ -9,6 +9,18 @@
     background: $color-secondary;
     @include border-radius();
     @extend .vh-center;
+    .registration-content{
+      padding: $padding-default*2;
+      height: 600px;
+      @extend .clearfix;
+      h1{
+        margin: 0px;
+        margin-bottom: $padding-default*2;
+      }
+      .form-control{
+        margin-bottom: $padding-default*3;
+      }
+    }
     .login-content{
       height: 600px;
       background: url('../image/login-abstract.png') center no-repeat;

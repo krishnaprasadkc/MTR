@@ -22,8 +22,7 @@
 	cursor: pointer;
 	display: inline-block;
 	overflow: hidden;
-    letter-spacing: .6px;
-	-webkit-user-select: none;
+  -webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -37,8 +36,8 @@
 	-ms-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
     &.btn-lg{
-        padding: $padding-default $padding-default *2 ;
-        font-size: $font-default;
+        padding: $padding-default+6 $padding-default *2 ;
+        font-size: $font-default+2;
     }
 	.waves-ripple {
 		position: absolute;
@@ -161,4 +160,3 @@ Mixin Format: ($btn-bg, $btn-border, $btn-text)
 .btn-add-an-item{
     margin-bottom: -($padding-default *4);
 }
-

@@ -1,11 +1,12 @@
-/*1. FONT FAMILY & SIZES - DEFAULTM, HEADING ETC. 
+/*1. FONT FAMILY & SIZES - DEFAULTM, HEADING ETC.
 2. SPACING
-3. 
+3.
 */
 
 /************************/
-$brand-font: 'Source Sans Pro', sans-serif;
+// $brand-font: 'Source Sans Pro', sans-serif;font-family: 'Montserrat', sans-serif;
 
+$brand-font: 'Montserrat', sans-serif;
 $font-default: 14px;
 
 $heading-one: 3*$font-default;
@@ -77,6 +78,3 @@ $border-radius-default: 4px;
 
 
 $btn-size-default: 4em;
-
-
-
