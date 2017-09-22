@@ -13,6 +13,11 @@
       padding: $padding-default*2;
       height: 600px;
       @extend .clearfix;
+      position: relative;
+      .login-footer{
+        position: absolute;
+        bottom: 30px;
+      }
       h1{
         margin: 0px;
         margin-bottom: $padding-default*2;
@@ -24,6 +29,23 @@
     .login-content{
       height: 600px;
       background: url('../image/login-abstract.png') center no-repeat;
+      padding: $padding-default*2;
+      position: relative;
+      .login-footer{
+        position: absolute;
+        position: absolute;
+        bottom: 50px;
+        left: 60px;
+        right: 60px;
+        margin: auto;
+        .btn{
+          width: 100%;
+          @include button-color(#de4c35, $color-secondary);
+          i.fa{
+            float: left;
+          }
+        }
+      }
     }
   }
   &:before{
