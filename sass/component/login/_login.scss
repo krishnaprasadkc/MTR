@@ -1,0 +1,25 @@
+.login{
+  height:100vh;
+  width:100vw;
+
+  background: $color-brand;
+  .login-box{
+    width: 1000px;
+    max-height: 600px;
+    background: $color-secondary;
+    @include border-radius();
+    @extend .vh-center;
+    .login-content{
+      height: 600px;
+      background: url('../image/login-abstract.png') center no-repeat;
+    }
+  }
+  &:before{
+    content: '';
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: rgba($color-primary, .3);
+  }
+}
