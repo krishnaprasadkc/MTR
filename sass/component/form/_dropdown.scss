@@ -29,7 +29,15 @@ Checkbox
             }
             .selector {
                 background: $color-grey-light;
-                border-left: 1px solid $color-grey-border;
+                &:before{
+                    position: absolute;
+                    left: -1px;
+                    content: '';
+                    border-left: 1px solid $color-secondary;
+                    border-right: 1px solid $color-grey-border;
+                    top: 0;
+                    height: 100%;
+                }
             }
         }
         .name {
@@ -52,7 +60,7 @@ Checkbox
             position: relative;
             padding-bottom: 0;
             right: -1px;
-            top: 0%;
+            top: -2%;
             position: absolute;
             background: $color-grey-light;
             border: 0px solid $color-grey-border;
