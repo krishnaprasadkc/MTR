@@ -85,7 +85,7 @@ Timeline
                     line-height: 24px;
                 }
                 &.collapsed {
-                    @include button-color($color-grey-medium, $color-primary-medium);
+                    @include button-color($color-grey-dark, $color-secondary);
                     .fa-angle-up {
                         display: none;
                     }

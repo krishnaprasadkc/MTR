@@ -1,0 +1,11 @@
+.add-item-table{
+    max-height: 200px;
+    overflow: auto;
+    margin-top: $padding-default *2;
+    thead{
+        background: $color-grey-medium;
+    }
+    .table{
+        margin-bottom: $padding-default /1.5;
+    }
+}

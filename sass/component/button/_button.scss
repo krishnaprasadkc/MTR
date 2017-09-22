@@ -14,7 +14,7 @@
 ---------------------------------------------*/
 
 .btn {
-	padding: ($padding-default)-10 $padding-default;
+//	padding: ($padding-default)-10 $padding-default;
 	@include border-radius($border-radius-default);
 	text-shadow: none;
 	/*Wave Effect styles*/
@@ -22,6 +22,7 @@
 	cursor: pointer;
 	display: inline-block;
 	overflow: hidden;
+    letter-spacing: .6px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -35,6 +36,10 @@
 	-o-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
+    &.btn-lg{
+        padding: $padding-default $padding-default *2 ;
+        font-size: $font-default;
+    }
 	.waves-ripple {
 		position: absolute;
 		border-radius: 50%;
@@ -143,7 +148,7 @@ Mixin Format: ($btn-bg, $btn-border, $btn-text)
 	@include button-color($color-brand, $color-secondary);
 }
 .btn-secondary {
-	@include button-color($color-grey-medium, $color-primary-medium);
+	@include button-color($color-grey-dark, $color-secondary);
 }
 
 /*---------------------------------------------
