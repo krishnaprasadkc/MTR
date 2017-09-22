@@ -1,9 +1,12 @@
-.nav-search-wrapper{
-	.navbar-collapse{
-		&.search-input{
-			padding-top:($padding-default)-5;
-			margin-right:$margin-default;
-			vertical-align: top;
-		}
-	}
+.nav-search-wrapper {
+    .navbar-collapse {
+        &.search-input {
+            padding-top: ($padding-default)-5;
+            margin-right: $margin-default;
+            vertical-align: top;
+            .form-control {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

@@ -1,20 +1,29 @@
-.chips{
-	color: $color-secondary;
-	height: 32px;
-	line-height: 32px;
-	padding:0 ($padding-default)-3;
-	background: $color-brand;
-	display: inline-block;
-	@include border-radius(8*$border-radius-default);
-	.chips-icon{
-		  color: $color-secondary;
-		  cursor: pointer;
-		  float: right;
-		  font-size: 16px;
-		  line-height: 32px;
-		  padding-left: 8px;
-	}
-	&.disabled{
-		background: $color-grey-dark;
-	}
+.chips {
+    color: $color-secondary;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 ($padding-default)-3;
+    background: $color-brand;
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 47%;
+    @include border-radius(8*$border-radius-default);
+    span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline-block;
+    }
+    .chips-icon {
+        color: $color-secondary;
+        cursor: pointer;
+        float: right;
+        font-size: 16px;
+        line-height: 32px;
+        padding-left: 8px;
+    }
+    &.disabled {
+        background: $color-grey-dark;
+    }
 }
