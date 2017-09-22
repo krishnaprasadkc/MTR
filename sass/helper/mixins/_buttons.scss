@@ -9,6 +9,7 @@
   transition: 0.3s;
 	&:hover, &:active{
 		background: darken($btn-bg, 10%) !important;
+        color: $btn-text;
 	}
 	&:focus{
 //		background: $btn-bg !important;
