@@ -1,18 +1,32 @@
-.modal-backdrop{
-	background: $color-secondary;
+.modal-backdrop {
+    background: $color-secondary;
 }
-.modal-dialog{
-	width: 95%;
-	max-width: 1000px;
-	.modal-title{
-		&:before{
-			background: $color-brand;
-			content: '';
-		}
-	}
-	.modal-content{
-		border: none 0px;
-		border-radius: 0;
-		 @include box-shadow($top:0, $left:0, $blur:30px, $color:rgba(0,0,0,.1));
-	}
+
+.modal-dialog {
+    width: 90%;
+    .modal-header {
+        padding: 0;
+        border: 0px;
+        .modal-title {
+            display: inline-block;
+            color: $color-secondary;
+            background: $color-brand;
+            padding: $padding-default $padding-default *2;
+            &:before {
+                background: $color-brand;
+                content: '';
+            }
+        }
+        .close {
+            margin-right: $padding-default/1.5;
+            margin-top: $padding-default/10;
+            font-size: $font-default +22;
+            font-weight: $font-regular;
+        }
+    }
+    .modal-content {
+        border: none 0px;
+        border-radius: 0;
+        @include box-shadow($top: 0, $left:0, $blur:30px, $color:rgba(0, 0, 0, .1));
+    }
 }
