@@ -11,3 +11,24 @@ Slimscroll
         }
     }
 }
+/*global scroll*/
+body{
+    overflow: scroll;
+}
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100,100,100,0.4); 
+}
