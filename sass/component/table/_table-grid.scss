@@ -1,24 +1,27 @@
-.add-item-table{
-    max-height: 200px;
-    overflow: auto;
-    margin-top: $padding-default *2;
-    thead{
-        background: $color-grey-medium;
-    }
-    .table{
-        margin-bottom: $padding-default /1.5;
-        > thead > tr > th{
-            font-weight: $font-regular;
-        }
-    }
-    .table-row-actions{
-        text-align: center;
-        i{
-            padding: 0 $padding-default/3;
-            cursor: pointer;
-        }
-        i:hover{
-            color: $color-primary;
-        }
-    }
+.table-grid-default {
+	&.modal-grid{
+		max-height: 200px;
+		overflow: auto;
+	}
+	.table {
+		margin-bottom: 0;
+		thead {
+			background: $color-grey-medium;
+			> tr > th {
+				font-weight: $font-regular;
+			}
+		}
+		tbody{
+			.table-row-actions {
+				text-align: center;
+				i {
+					padding: 0 $padding-default/3;
+					cursor: pointer;
+				}
+				i:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
 }
